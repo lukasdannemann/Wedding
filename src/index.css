@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Inconsolata:wght@200..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Space+Grotesk:wght@300..700&display=swap');
+
+:root {
+  /* Huvudfärger */
+  --color-burgundy: #5D1212;      /* Den mörkröda färgen från ditt kort */
+  --color-burgundy-soft: #7A2E2E; /* En något ljusare variant för hover-effekter */
+  
+  /* Bakgrund och papper */
+  --color-bg-beige: #F4EEE0;      /* Den beigekrämiga färgen för hela bakgrunden */
+  --color-card-white: #FDFBF7;    /* En nästan vit, men varm ton för själva "kortet" */
+  
+  /* Text och linjer */
+  --color-text: #2D0808;          /* En extremt mörk vinröd (istället för ren svart) */
+  --color-border: rgba(93, 18, 18, 0.3); /* Subtila vinröda linjer */
+
+  /* Typsnitt - Serif är nyckeln för "brev"-känslan */
+  --font-main: 'Lora', 'Playfair Display', serif;
+  --font-text: 'Inconsolata', serif;
+
+  
+  /* Avstånd och styling */
+  --border-radius: 4px;           /* Håll det kantigt men mjukt */
+  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.05); /* Väldigt subtil skugga för kortet */
+}
+
+html {
+  scroll-behavior: smooth;
+  /* Om du har en sticky navbar som är t.ex. 80px hög: */
+  scroll-padding-top: 80px; 
+}
+
+  body {
+  background-color: var(--color-bg-beige);
+  min-height: 100vh;
+  margin: 0;
+  background-repeat: repeat; 
+  background-size: 800px auto; 
+}
+
+h1, h2 {
+  color: var(--color-burgundy);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+button {
+  background-color: var(--color-burgundy);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--color-burgundy-soft);
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}

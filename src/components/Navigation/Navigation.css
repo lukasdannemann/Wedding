@@ -1,0 +1,25 @@
+.navbar {
+    position: sticky;
+    top: 0; /* Här "fastnar" den */
+    z-index: 1000; /* Så den ligger ovanpå allt annat när man skrollar */
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(93, 18, 18, 0.1);
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: var(--color-burgundy-soft);
+    font-family: 'Special Elite', monospace; /* Din skrivmaskinsfont */
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}

@@ -1,0 +1,14 @@
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--color-bg-beige);
+    border-bottom: 2px solid var(--color-border);
+    margin: 0 5rem ;
+}
+
+h1 {
+    font-size: 3rem;
+    font-family: var(--font-main);
+}

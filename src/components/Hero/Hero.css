@@ -1,0 +1,24 @@
+.hero-section {
+    /* padding: 60px 20px; */
+    text-align: center;
+}
+
+.castle-img {
+    max-width: 300px; /* Justera efter smak */
+    width: 100%;
+    height: auto;
+}
+
+.hero-intro .typewriter {
+    font-family: 'Special Elite', monospace;
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.hero-intro .typewriter-sub {
+    font-family: 'Special Elite', monospace;
+    font-size: 1rem;
+    color: #5D1212;
+    opacity: 0.8;
+}
