@@ -10,7 +10,7 @@ export default function Hero() {
             
             <div className='hero-intro'>
                 <p className='typewriter'>Välkomna att fira vårt bröllop på Bjertorp Slott.</p>
-                <p className='typewriter-sub'>Lördagen den 19 september 2026</p>
+                <p className='fine-print'>Lördagen den 19 september 2026</p>
             </div>
         </section>
     );

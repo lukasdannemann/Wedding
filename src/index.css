@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Inconsolata:wght@200..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&display=swap');
 
 :root {
   /* Huvudfärger */
@@ -15,7 +16,8 @@
 
   /* Typsnitt - Serif är nyckeln för "brev"-känslan */
   --font-main: 'Lora', 'Playfair Display', serif;
-  --font-text: 'Inconsolata', serif;
+  --font-text: 'Special Elite', monospace;
+
 
   
   /* Avstånd och styling */
@@ -35,6 +37,7 @@ html {
   margin: 0;
   background-repeat: repeat; 
   background-size: 800px auto; 
+  text-align: center;
 }
 
 h1, h2 {
@@ -62,4 +65,16 @@ a {
 
 li {
   list-style: none;
+}
+
+/* Global classes */
+
+.fine-print {
+  font-family: 'Playfair Display', serif;
+  font-style: italic; /* Detta aktiverar den kursiva varianten */
+  font-weight:0;
+  font-size: 0.9rem;   /* Gör den lite mindre för den "finstilta" känslan */
+  letter-spacing: 0.5px;
+  color: var(--color-burgundy);      /* Din vinröda färg */
+  opacity: 0.9;        /* Gör den lite mjukare mot bakgrunden */
 }

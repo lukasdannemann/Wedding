@@ -10,14 +10,13 @@
 }
 
 .hero-intro .typewriter {
-    font-family: 'Special Elite', monospace;
+    font-family: var(--font-text);
     font-size: 1.2rem;
-    color: #333;
+    color: var(--color-text);
     margin-bottom: 10px;
 }
 
-.hero-intro .typewriter-sub {
-    font-family: 'Special Elite', monospace;
+.hero-intro {
     font-size: 1rem;
     color: #5D1212;
     opacity: 0.8;
