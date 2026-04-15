@@ -9,6 +9,7 @@ function App() {
 
   return (
     <Router>
+      <Header />
       <div className="app">
         {/* <Navigation /> */}
         <main className="main-content">
