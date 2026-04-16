@@ -1,0 +1,106 @@
+/* Centrerar hela sidan och innehållet */
+.form-page {
+  display: flex;
+  justify-content: center;
+  padding-top: 2rem;
+  min-height: 100vh;
+}
+
+/* Centrerar allt inuti sektionen */
+.section-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centrerar h2, p och form horisontellt */
+  width: 100%;
+  padding: 0 20px;
+}
+
+.form-header {
+  letter-spacing: 0.3em;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+/* Själva formulärblocket */
+.wedding-form {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+  max-width: 450px; /* Begränsar bredden för att det ska se elegant ut */
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center; /* Centrerar labels och hjälpsam text */
+}
+
+.form-group label {
+  font-family: var(--font-main);
+  color: var(--color-burgundy);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Centrerar texten inuti input och textarea */
+.form-group input[type="text"],
+.form-group textarea,
+.form-group select {
+  font-family: var(--font-text);
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--color-border);
+  padding: 12px 5px;
+  color: var(--color-text);
+  outline: none;
+  text-align: center; /* Gör att texten man skriver också är centrerad */
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+  border-bottom: 1px solid var(--color-burgundy);
+}
+
+/* Centrerar radioknapparna */
+.radio-group {
+  font-family: var(--font-text);
+  display: flex;
+  justify-content: center; /* Centrerar Ja/Nej-valen */
+  gap: 30px;
+  margin-top: 10px;
+}
+
+.radio-group label {
+  text-transform: none;
+  letter-spacing: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+/* Knappen centrerad och lagom bred */
+.submit-btn {
+  margin: 20px auto 0 auto;
+  width: 100%;
+  max-width: 250px;
+  background-color: var(--color-burgundy);
+  color: white;
+  font-family: var(--font-main);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 15px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s, opacity 0.3s;
+}
+
+.submit-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}

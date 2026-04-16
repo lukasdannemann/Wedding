@@ -1,0 +1,41 @@
+import './forms.css';
+
+export default function Tal() {
+  return (
+    <div className="content-wrapper form-page">
+      <section className="section-container">
+        <h2 className="form-header">Anmäl Tal</h2>
+        <p className="fine-print">Detta formulär läses endast av Toastmastern</p>
+        
+        <form action="https://formspree.io/f/TOASTMASTER_FORMSPREE_ID" method="POST" className="wedding-form">
+          <div className="form-group">
+            <label htmlFor="speaker-name">Ditt namn</label>
+            <input type="text" id="speaker-name" name="name" required />
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="email">E-post eller telefon</label>
+            <input type="text" id="email" name="contact" required placeholder="Så vi kan nå dig" />
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="speech-type">Vad vill du göra?</label>
+            <select id="speech-type" name="type">
+              <option value="tal">Hålla tal</option>
+              <option value="spex">Framföra spex/lek</option>
+              <option value="video">Visa video</option>
+              <option value="annat">Annat</option>
+            </select>
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="requirements">Behöver du teknik? (Mikrofon, projektor etc.)</label>
+            <textarea id="requirements" name="requirements" rows="2"></textarea>
+          </div>
+
+          <button type="submit" className="submit-btn">Anmäl till Toastmastern</button>
+        </form>
+      </section>
+    </div>
+  );
+}

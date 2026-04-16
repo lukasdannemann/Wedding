@@ -23,8 +23,8 @@ export default function Navigation() {
                     >Vigsel</HashLink>
                 </li>
                 {/* Fortsätt likadant för resten... */}
-                <li><NavLink to='/contact'>OSA</NavLink></li>
-                <li><NavLink to='/speech'>Tal</NavLink></li>
+                <li><NavLink to='/osa'>OSA</NavLink></li>
+                <li><NavLink to='/tal'>Tal</NavLink></li>
             </ul>
         </nav>
     )
