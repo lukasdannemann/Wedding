@@ -15,6 +15,10 @@
     padding: 0;
 }
 
+.navbar li {
+    position: relative;
+}
+
 .navbar a {
     text-decoration: none;
     color: var(--color-burgundy-soft);
@@ -22,4 +26,30 @@
     font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 1px;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+.navbar a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px; /* Placerar strecket precis under texten */
+    left: 50%;
+    width: 0;
+    height: 1.5px;
+    background-color: var(--color-burgundy);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+.navbar a.active::after {
+    width: 100%;
+}
+
+.navbar a:hover, .navbar a.active {
+    color: var(--color-burgundy);
 }
