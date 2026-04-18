@@ -1,12 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Inconsolata:wght@200..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Space+Grotesk:wght@300..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
 
 :root {
   /* Huvudfärger */
-  --color-burgundy: #5D1212;      /* Den mörkröda färgen från ditt kort */
+  --color-burgundy: #7A0000;      /* Den mörkröda färgen från ditt kort */
   --color-burgundy-soft: #7A2E2E; /* En något ljusare variant för hover-effekter */
-  
-  /* Alternativ färg #947338 */
+  --color-dark-yellow: #947338;
+
+  /* Alternativ gul färg #947338 */
+  /* Alternativ röd färg #7A0000*/
+
   /* Bakgrund och papper */
   --color-bg-beige: #F4EEE0;      /* Den beigekrämiga färgen för hela bakgrunden */
   --color-card-white: #FDFBF7;    /* En nästan vit, men varm ton för själva "kortet" */
@@ -16,10 +20,10 @@
   --color-border: rgba(93, 18, 18, 0.3); /* Subtila vinröda linjer */
 
   /* Typsnitt - Serif är nyckeln för "brev"-känslan */
-  --font-main: 'Lora', 'Playfair Display', serif;
-  --font-text: 'Special Elite', monospace;
+  --font-main: 'Libre Baskerville', serif;
+  /* --font-text: 'Special Elite', monospace; */
 
-
+--font-text: 'Lora', 'Playfair Display', serif;
   
   /* Avstånd och styling */
   --border-radius: 4px;           /* Håll det kantigt men mjukt */
@@ -48,21 +52,16 @@ h1, h2 {
   letter-spacing: 2px;
 }
 
-button {
-  background-color: var(--color-burgundy);
-  color: white;
-  border: none;
-  padding: 12px 24px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
 button:hover {
   background-color: var(--color-burgundy-soft);
 }
 
 a {
   text-decoration: none;
+}
+
+a, button {
+  -webkit-tap-highlight-color: transparent;
 }
 
 li {
@@ -79,4 +78,57 @@ li {
   letter-spacing: 0.5px;
   color: var(--color-burgundy);      /* Din vinröda färg */
   opacity: 0.9;        /* Gör den lite mjukare mot bakgrunden */
+}
+
+/* Lägg till/uppdatera i src/index.css */
+
+.section-container {
+    padding: 100px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 2rem;
+    letter-spacing: 0.4rem;
+    margin-bottom: 0.5rem;
+}
+
+.section-content {
+    margin-top: 3rem;
+    width: 100%;
+}
+
+.typewriter-label {
+    font-family: var(--font-main);
+    color: var(--color-burgundy);
+    font-size: 0.85rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.typewriter-text {
+    font-family: var(--font-text); /* Special Elite */
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.thin-line {
+    width: 100%;
+    max-width: 300px;
+    height: 1px;
+    background-color: var(--color-border);
+    margin: 2rem auto;
+}
+
+.mini-castle-divider {
+    width: 60px;
+    height: auto;
+    opacity: 0.3;
+    margin-top: 4rem;
 }

@@ -5,12 +5,15 @@ import Tal from './components/Tal'
 import Osa from './components/Osa'
 import Header from './components/Header/Header'
 import Navigation from './components/Navigation/Navigation'
-
+import ScrollToTop from './components/ScrollToTop/ScrollToTop'
+import ScrollToTopBtn from './components/ScrollToTopButton/ScrollToTopBtn'
 function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <Header />
+      <Navigation />
       <div className="app">
         {/* <Navigation /> */}
         <main className="main-content">
@@ -21,6 +24,7 @@ function App() {
           </Routes>
         </main>
       </div>
+      <ScrollToTopBtn />
     </Router>
   )
 }

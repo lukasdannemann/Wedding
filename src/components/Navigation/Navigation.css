@@ -1,55 +1,68 @@
 .navbar {
-    position: sticky;
-    top: 0; /* Här "fastnar" den */
-    z-index: 1000; /* Så den ligger ovanpå allt annat när man skrollar */
-    padding: 15px 0;
-    border-bottom: 1px solid rgba(93, 18, 18, 0.1);
+  position: sticky;
+  top: 0; /* Här "fastnar" den */
+  z-index: 1000; /* Så den ligger ovanpå allt annat när man skrollar */
+  padding: 1rem;
+  margin: 0 5rem;
+  border-bottom: 2px solid var(--color-border);
+  background-color: rgba(244, 238, 224, 0.8);
+  backdrop-filter: blur(5px);
+  transform: translateZ(0);
+  will-change: transform;
 }
 
 .navbar ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin: 0;
+  padding: 0;
 }
 
 .navbar li {
-    position: relative;
+  position: relative;
 }
 
 .navbar a {
-    text-decoration: none;
-    color: var(--color-burgundy-soft);
-    font-family: 'Special Elite', monospace; /* Din skrivmaskinsfont */
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    padding: 5px 0;
-    transition: color 0.3s ease;
+  text-decoration: none;
+  color: var(--color-burgundy);
+  font-family: "Special Elite", monospace; /* Din skrivmaskinsfont */
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 5px 0;
+  transition: color 0.3s ease;
 }
 
 .navbar a::after {
-    content: '';
-    position: absolute;
-    bottom: -2px; /* Placerar strecket precis under texten */
-    left: 50%;
-    width: 0;
-    height: 1.5px;
-    background-color: var(--color-burgundy);
-    transition: all 0.3s ease;
-    transform: translateX(-50%);
+  content: "";
+  position: absolute;
+  bottom: -2px; /* Placerar strecket precis under texten */
+  left: 50%;
+  width: 0;
+  height: 1.5px;
+  background-color: var(--color-dark-yellow);
+  transition: width 0.3s ease;
+  transform: translateX(-50%);
 }
 
 .navbar a:hover::after {
-    width: 100%;
+  width: 100%;
 }
 
 .navbar a.active::after {
-    width: 100%;
+  width: 100%;
 }
 
-.navbar a:hover, .navbar a.active {
-    color: var(--color-burgundy);
+.navbar a:hover,
+.navbar a.active {
+  color: var(--color-dark-yellow);
 }
+
+.navbar a:active {
+  opacity: 0.7;
+  transition: none; /* Ingen fördröjning vid själva touchen */
+}
+
+
