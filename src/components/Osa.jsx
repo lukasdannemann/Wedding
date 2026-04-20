@@ -6,7 +6,7 @@ export default function Osa() {
       <section className="section-container">
         <h2 className="form-header">O.S.A.</h2>
         <p className="fine-print">Vänligen svara senast den 1 juli 2026</p>
-        
+
         {/* Ersätt 'DIN_FORMSPREE_ID' senare */}
         <form action="https://formspree.io/f/DIN_FORMSPREE_ID" method="POST" className="wedding-form">
           <div className="form-group">
@@ -22,14 +22,17 @@ export default function Osa() {
             </div>
           </div>
 
+          {/* Byt ut textareas mot dessa: */}
           <div className="form-group">
             <label htmlFor="allergies">Allergier eller specialkost</label>
-            <textarea id="allergies" name="allergies" rows="3" placeholder="T.ex. Veganskt, Nötallergi..."></textarea>
+            {/* Ändrat till input */}
+            <input type="text" id="allergies" name="allergies" placeholder="T.ex. Veganskt, Nötallergi..." />
           </div>
 
           <div className="form-group">
             <label htmlFor="message">Hälsning till brudparet</label>
-            <textarea id="message" name="message" rows="3"></textarea>
+            {/* Ändrat till input */}
+            <input type="text" id="message" name="message" placeholder="Skriv en hälsning..." />
           </div>
 
           <button type="submit" className="submit-btn">Skicka svar</button>

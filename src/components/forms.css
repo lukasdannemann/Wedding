@@ -38,6 +38,14 @@
   text-align: center; /* Centrerar labels och hjälpsam text */
 }
 
+/* Lägg till detta bland dina form-stilar i forms.css */
+.form-group select {
+  -webkit-appearance: none; /* Tar bort standardpilen på mobiler */
+  appearance: none;
+  text-align-last: center; /* Tvingar vald text att centrera sig (annars lägger den sig till vänster) */
+  border-radius: 0; /* Förhindrar att iOS rundar hörnen osynligt */
+}
+
 .form-group label {
   font-family: var(--font-main);
   color: var(--color-burgundy);
@@ -50,11 +58,11 @@
 .form-group input[type="text"],
 .form-group textarea,
 .form-group select {
-  font-family: var(--font-text);
+  font-family: var(--font-main);
   background: transparent;
   border: none;
   border-bottom: 1px solid var(--color-border);
-  padding: 12px 5px;
+  padding: 10px 5px;
   color: var(--color-text);
   outline: none;
   text-align: center; /* Gör att texten man skriver också är centrerad */
@@ -68,7 +76,7 @@
 
 /* Centrerar radioknapparna */
 .radio-group {
-  font-family: var(--font-text);
+  font-family: var(--font-main);
   display: flex;
   justify-content: center; /* Centrerar Ja/Nej-valen */
   gap: 30px;
@@ -103,4 +111,32 @@
 .submit-btn:hover {
   opacity: 0.9;
   transform: translateY(-2px);
+}
+
+
+/* Lägg till i src/components/forms.css */
+@media (max-width: 600px) {
+    .form-page {
+        padding-top: 1rem;
+    }
+
+    .wedding-form {
+        gap: 20px; /* Tätare mellan fälten */
+        margin-top: 20px;
+    }
+
+    .form-group label {
+        font-size: 0.85rem;
+    }
+
+    .radio-group {
+        flex-direction: column; /* Stapla Ja/Nej på varandra för lättare klick */
+        align-items: center;
+        gap: 15px;
+    }
+
+    .submit-btn {
+        padding: 12px;
+        font-size: 0.9rem;
+    }
 }

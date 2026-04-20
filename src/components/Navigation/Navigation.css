@@ -42,7 +42,7 @@
   left: 50%;
   width: 0;
   height: 1.5px;
-  background-color: var(--color-dark-yellow);
+  background-color: var(--color-burgundy);
   transition: width 0.3s ease;
   transform: translateX(-50%);
 }
@@ -57,7 +57,7 @@
 
 .navbar a:hover,
 .navbar a.active {
-  color: var(--color-dark-yellow);
+  color: var(--color-burgundy);
 }
 
 .navbar a:active {
@@ -66,3 +66,19 @@
 }
 
 
+@media (max-width: 600px) {
+    .navbar {
+        margin: 0; /* Tar bort 5rem-marginalen */
+        padding: 0.6rem 0;
+    }
+
+    .navbar ul {
+        gap: 2rem; /* Krymper gapet från 3rem */
+        padding: 0 5px;
+    }
+
+    .navbar a {
+        font-size: 0.7rem;
+        letter-spacing: 0.5px;
+    }
+}

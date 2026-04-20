@@ -15,4 +15,13 @@ h1 {
     font-size: 3rem;
     font-family: var(--font-main);
     color: var(--color-text);
+    /* color: black; */
+}
+
+@media (max-width: 600px) {
+    .header h1 {
+        font-size: clamp(1.4rem, 7vw, 2.5rem); 
+        white-space: nowrap;
+        margin: 0.8rem 0;
+    }
 }

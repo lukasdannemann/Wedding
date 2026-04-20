@@ -6,7 +6,7 @@ export default function Tal() {
       <section className="section-container">
         <h2 className="form-header">Anmäl Tal</h2>
         <p className="fine-print">Detta formulär läses endast av Toastmastern</p>
-        
+
         <form action="https://formspree.io/f/TOASTMASTER_FORMSPREE_ID" method="POST" className="wedding-form">
           <div className="form-group">
             <label htmlFor="speaker-name">Ditt namn</label>
@@ -30,7 +30,8 @@ export default function Tal() {
 
           <div className="form-group">
             <label htmlFor="requirements">Behöver du teknik? (Mikrofon, projektor etc.)</label>
-            <textarea id="requirements" name="requirements" rows="2"></textarea>
+            {/* Ändrat till input */}
+            <input type="text" id="requirements" name="requirements" placeholder="T.ex. Ja, en mikrofon" />
           </div>
 
           <button type="submit" className="submit-btn">Anmäl till Toastmastern</button>

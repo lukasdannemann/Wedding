@@ -1,24 +1,38 @@
 .hero-section {
-    /* padding: 60px 20px; */
-    padding-top: 2rem;
     text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
 .castle-img {
-    max-width: 300px; /* Justera efter smak */
+    max-width: 300px;
     width: 100%;
     height: auto;
 }
 
 .hero-intro .typewriter {
-    font-family: var(--font-text);
+    font-family: var(--font-main);
     font-size: 1.2rem;
     color: var(--color-text);
-    margin-bottom: 10px;
 }
 
 .hero-intro {
     font-size: 1rem;
-    color: #5D1212;
-    opacity: 0.8;
+    color: var(--color-text);
+}
+
+/* Lägg till i src/components/Hero/Hero.css */
+@media (max-width: 600px) {
+    .hero-section {
+        padding-top: 1rem;
+    }
+
+    .castle-img {
+        max-width: 220px; /* Något mindre slott på mobilen */
+    }
+
+    .hero-intro .typewriter {
+        font-size: 1rem;
+        padding: 0 15px;
+    }
 }

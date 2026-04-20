@@ -1,5 +1,5 @@
 import Hero from "../../components/Hero/Hero"
-import Vigsel from "../../components/Vigsel/Vigsel"
+import Info from "../../components/Info/Info"
 import Festen from "../../components/Festen/Festen"
 import HittaHit from "../../components/Location/Location"
 
@@ -10,7 +10,7 @@ export default function Home() {
         <>
             <div className="home-page">
                 <Hero />
-                <Vigsel />
+                <Info />
                 <HittaHit />
                 <Festen />
             </div>

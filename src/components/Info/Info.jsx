@@ -1,7 +1,7 @@
-export default function Vigsel() {
+export default function Info() {
     return (
-        <section id="vigsel" className="section-container">
-            <h2 className="section-title">Vigsel</h2>
+        <section id="info" className="section-container">
+            <h2 className="section-title">Info</h2>
             <p className="fine-print">Lördagen den 19 september 2026 kl. 15:00</p>
             
             <div className="section-content">
