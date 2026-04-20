@@ -2,13 +2,17 @@ import castleimg from '../../assets/castle_img.png';
 
 export default function Festen() {
     return (
-        <section id="schema" className="section-container">
-            <h2 className="section-title">Festen</h2>
-            <p className="fine-print">Efter vigseln bjuds det på brudskål och mingel</p>
+        <section id="praktiskt" className="section-container">
+            <h2 className="section-title">Praktiskt</h2>
             
             <div className="section-content">
                 <p className="typewriter-label">KLÄDKOD</p>
                 <p className="typewriter-text">Mörk kostym</p>
+                
+                <div className="thin-line"></div>
+
+                <p className="typewriter-label">PRESENTER</p>
+                <p className="typewriter-text">Ge oss presenter !</p>
                 <div className="thin-line"></div>
                 
                 <p className="typewriter-text">

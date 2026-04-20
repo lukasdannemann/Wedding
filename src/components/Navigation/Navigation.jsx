@@ -6,7 +6,7 @@ import { useScrollSpy } from '../../hooks/useScrollSpy'
 
 export default function Navigation() {
     const location = useLocation(); // Håll koll på nuvarande URL
-    const activeSection = useScrollSpy(['hem', 'info', 'hitta-hit', 'schema']);
+    const activeSection = useScrollSpy(['dagen', 'boende', 'praktiskt']);
 
     // Kontrollera om vi är på startsidan
     const isHomePage = location.pathname === '/';
@@ -16,22 +16,22 @@ export default function Navigation() {
             <ul>
                 <li>
                     <HashLink 
-                        to='/#info' 
+                        to='/#dagen' 
                         /* Lägg bara till 'active' om vi är på startsidan OCH sektionen är aktiv */
-                        className={isHomePage && activeSection === 'info' ? 'active' : ''}
-                    >Info</HashLink>
+                        className={isHomePage && activeSection === 'dagen' ? 'active' : ''}
+                    >Dagen</HashLink>
                 </li>
                 <li>
                     <HashLink 
-                        to='/#hitta-hit'
-                        className={isHomePage && activeSection === 'hitta-hit' ? 'active' : ''}
-                    >Hitta hit</HashLink>
+                        to='/#boende'
+                        className={isHomePage && activeSection === 'boende' ? 'active' : ''}
+                    >Boende</HashLink>
                 </li>
                 <li>
                     <HashLink 
-                        to='/#schema' 
-                        className={isHomePage && activeSection === 'schema' ? 'active' : ''}
-                    >Schema</HashLink>
+                        to='/#praktiskt' 
+                        className={isHomePage && activeSection === 'praktiskt' ? 'active' : ''}
+                    >Praktiskt</HashLink>
                 </li>
                 
                 {/* NavLink sköter sin egen 'active'-klass automatiskt */}

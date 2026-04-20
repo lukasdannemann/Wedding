@@ -4,6 +4,7 @@
     align-items: center;
     flex-direction: column;
     background-color: var(--color-bg-beige);
+    padding-top: 1rem;
 }
 
 .header h1 {
@@ -20,7 +21,7 @@ h1 {
 
 @media (max-width: 600px) {
     .header h1 {
-        font-size: clamp(1.4rem, 7vw, 2.5rem); 
+        font-size: clamp(2rem, 8vw, 2.5rem); 
         white-space: nowrap;
         margin: 0.8rem 0;
     }

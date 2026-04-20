@@ -1,7 +1,7 @@
-export default function Info() {
+export default function Dagen() {
     return (
-        <section id="info" className="section-container">
-            <h2 className="section-title">Info</h2>
+        <section id="dagen" className="section-container">
+            <h2 className="section-title">Dagen</h2>
             <p className="fine-print">Lördagen den 19 september 2026 kl. 15:00</p>
             
             <div className="section-content">

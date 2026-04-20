@@ -1,11 +1,11 @@
 .navbar {
   position: sticky;
-  top: 0; /* Här "fastnar" den */
-  z-index: 1000; /* Så den ligger ovanpå allt annat när man skrollar */
-  padding: 1rem;
+  top: 0;
+  z-index: 1000;
+  padding: 1.5rem 1rem 1rem 1rem;
   margin: 0 5rem;
   border-bottom: 2px solid var(--color-border);
-  background-color: rgba(244, 238, 224, 0.8);
+  background-color: rgba(244, 238, 224, 0.5);
   backdrop-filter: blur(5px);
   transform: translateZ(0);
   will-change: transform;
@@ -69,7 +69,7 @@
 @media (max-width: 600px) {
     .navbar {
         margin: 0; /* Tar bort 5rem-marginalen */
-        padding: 0.6rem 0;
+        padding: 1rem 0;
     }
 
     .navbar ul {

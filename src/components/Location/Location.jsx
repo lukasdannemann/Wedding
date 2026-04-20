@@ -1,7 +1,7 @@
 export default function HittaHit() {
     return (
-        <section id="hitta-hit" className="section-container">
-            <h2 className="section-title">Hitta hit</h2>
+        <section id="boende" className="section-container">
+            <h2 className="section-title">Boende</h2>
             
             <div className="section-content">
                 <p className="typewriter-label">ADRESS</p>
