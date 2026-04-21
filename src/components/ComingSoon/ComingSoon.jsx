@@ -18,7 +18,7 @@ export default function ComingSoon() {
         
         <div className="thin-line"></div>
         
-        <p className="typewriter-text" style={{ opacity: 0.8 }}>
+        <p className="typewriter-text">
           Vi bygger för fullt på vår bröllopssida! <br/>
           Här kommer du kunna OSA och se all information inom kort!  
           <span className='fine-print'>// Calle & Siobhán </span>
