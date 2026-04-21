@@ -7,6 +7,7 @@ import Header from './components/Header/Header'
 import Navigation from './components/Navigation/Navigation'
 import ScrollToTop from './components/ScrollToTop/ScrollToTop'
 import ScrollToTopBtn from './components/ScrollToTopButton/ScrollToTopBtn'
+import Footer from './components/Footer/Footer'
 function App() {
 
   return (
@@ -24,6 +25,7 @@ function App() {
           </Routes>
         </main>
       </div>
+      <Footer />
       <ScrollToTopBtn />
     </Router>
   )
