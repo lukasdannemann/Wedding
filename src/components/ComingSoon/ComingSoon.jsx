@@ -6,13 +6,13 @@ export default function ComingSoon() {
   return (
     <div className="coming-soon-page">
       <div className="coming-soon-content">
-        <h1>Calle & Siobhán</h1>
+        {/* <h1>Calle & Siobhán</h1> */}
         
         <div className="castle-container">
-          <img src={castleimg} alt="Bjertorp Slott" className="castle-img" />
+          <img src={castleimg} alt="Bjertorp Slott" className="castle-img" style={{marginTop: '-1rem'}}/>
         </div>
         
-        <p className="fine-print" style={{ fontSize: '1.5rem', margin: '10px 0 30px 0' }}>
+        <p className="fine-print" style={{ fontSize: '1.5rem', marginTop: '-2rem'}}>
           19 september 2026
         </p>
         
@@ -20,7 +20,8 @@ export default function ComingSoon() {
         
         <p className="typewriter-text" style={{ opacity: 0.8 }}>
           Vi bygger för fullt på vår bröllopssida! <br/>
-          Inbjudan och mer information publiceras här inom kort!  
+          Här kommer du kunna OSA och se all information inom kort!  
+          <span className='fine-print'>// Calle & Siobhán </span>
         </p>
       </div>
     </div>

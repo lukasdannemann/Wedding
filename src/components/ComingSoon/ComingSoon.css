@@ -7,7 +7,6 @@
   width: 100vw;
   background-color: var(--color-bg-beige);
   overflow: hidden; /* Förhindrar ALL skrollning */
-  padding: 10px;
   box-sizing: border-box;
 }
 
@@ -37,14 +36,6 @@
   width: auto;
   max-width: 200px; /* Begränsar bredden */
   max-height: 28vh; /* Begränsar höjden så den aldrig tar mer än 28% av skärmen */
-  opacity: 0.9;
-}
-
-.save-date-label {
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  margin: 10px 0 0 0;
-  font-size: clamp(0.8rem, 3vw, 1rem);
 }
 
 .date-text {
@@ -58,11 +49,9 @@
   max-width: 150px;
 }
 
-.info-text {
-  margin: 0;
-  opacity: 0.8;
-  font-size: clamp(0.75rem, 3vw, 0.95rem); /* Garanterar att brödtexten också får plats */
-  line-height: 1.5;
+.typewriter-text .fine-print {
+    display: block;
+    font-size: 1.5rem;
 }
 
 @keyframes fadeIn {
