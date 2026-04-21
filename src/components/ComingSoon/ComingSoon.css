@@ -1,0 +1,71 @@
+/* src/components/ComingSoon/ComingSoon.css */
+.coming-soon-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh; /* 'dvh' ser till att Safari/Chromes mobilmenyer inte kapar botten */
+  width: 100vw;
+  background-color: var(--color-bg-beige);
+  overflow: hidden; /* Förhindrar ALL skrollning */
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.coming-soon-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  max-width: 600px;
+  animation: fadeIn 1.5s ease-in;
+}
+
+.coming-soon-content h1 {
+  white-space: nowrap; /* Tvingar namnen att stanna på samma rad */
+  font-size: clamp(1.5rem, 8.5vw, 3.5rem); /* Krymper automatiskt på smala skärmar */
+  margin: 0 0 10px 0; /* Minimalt avstånd neråt */
+  letter-spacing: 1px;
+}
+
+.coming-soon-castle {
+  margin-bottom: 5px; /* Minimalt avstånd */
+  line-height: 0;
+}
+
+.coming-soon-castle .castle-img {
+  width: auto;
+  max-width: 200px; /* Begränsar bredden */
+  max-height: 28vh; /* Begränsar höjden så den aldrig tar mer än 28% av skärmen */
+  opacity: 0.9;
+}
+
+.save-date-label {
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin: 10px 0 0 0;
+  font-size: clamp(0.8rem, 3vw, 1rem);
+}
+
+.date-text {
+  font-size: clamp(1.2rem, 5vw, 1.6rem);
+  margin: 5px 0;
+}
+
+.coming-soon-content .thin-line {
+  margin: 15px auto;
+  width: 60%;
+  max-width: 150px;
+}
+
+.info-text {
+  margin: 0;
+  opacity: 0.8;
+  font-size: clamp(0.75rem, 3vw, 0.95rem); /* Garanterar att brödtexten också får plats */
+  line-height: 1.5;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
