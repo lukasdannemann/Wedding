@@ -12,12 +12,12 @@
   /* Alternativ röd färg #7A0000*/
 
   /* Bakgrund och papper */
-  --color-bg-beige: #F4EEE0;      /* Den beigekrämiga färgen för hela bakgrunden */
+  --color-bg-beige: #FAF8F5;      /* Den beigekrämiga färgen för hela bakgrunden */
   --color-card-white: #FDFBF7;    /* En nästan vit, men varm ton för själva "kortet" */
   
   /* Text och linjer */
   --color-text: #2D0808;          /* En extremt mörk vinröd (istället för ren svart) */
-  --color-border: rgba(93, 18, 18, 0.3); /* Subtila vinröda linjer */
+  --color-border: rgba(93, 18, 18, 0.5); /* Subtila vinröda linjer */
 
   /* Typsnitt - Serif är nyckeln för "brev"-känslan */
   --font-main: 'Libre Baskerville', serif;
@@ -30,14 +30,34 @@
   --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.05); /* Väldigt subtil skugga för kortet */
 }
 
+/* Ser till att padding och borders räknas in i elementens bredd */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Dödar all horisontell skroll och centrerar hela appen */
+html, body {
+  overflow-x: clip;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.app, .main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
 html {
   scroll-behavior: smooth;
-  /* Om du har en sticky navbar som är t.ex. 80px hög: */
   scroll-padding-top: 80px; 
 }
 
   body {
   background-color: var(--color-bg-beige);
+  min-height: 100vh;
   margin: 0;
   background-repeat: repeat; 
   background-size: 800px auto; 
@@ -120,8 +140,8 @@ li {
 .thin-line {
     width: 100%;
     max-width: 300px;
-    height: 1px;
-    background-color: var(--color-border);
+    height: 0;
+    border-top: 1px solid var(--color-border);
     margin: 2rem auto;
 }
 
@@ -130,4 +150,29 @@ li {
     height: auto;
     opacity: 0.3;
     margin-top: 4rem;
+}
+
+/* Lägg till längst ner i src/index.css */
+@media (max-width: 600px) {
+    .section-container {
+        padding: 50px 20px; /* Minskar padding från 100px */
+    }
+
+    .section-title {
+        font-size: 1.6rem; /* Minskar från 2rem */
+        letter-spacing: 0.3rem; /* Något tätare */
+    }
+
+    .section-content {
+        margin-top: 2rem; /* Mindre avstånd till innehållet */
+    }
+
+    .typewriter-text {
+        font-size: 0.95rem; /* Bättre läsbarhet på liten skärm */
+        line-height: 1.6;
+    }
+
+    .thin-line {
+        margin: 1.5rem auto; /* Mindre luft runt linjerna */
+    }
 }

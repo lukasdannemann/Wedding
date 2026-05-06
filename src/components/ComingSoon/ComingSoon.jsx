@@ -1,6 +1,6 @@
 // src/components/ComingSoon/ComingSoon.jsx
 import './ComingSoon.css';
-import castleimg from '../../assets/castle_img.png';
+import castleimg from '../../assets/riks-arkivet-transparent.png';
 
 export default function ComingSoon() {
   return (
@@ -9,10 +9,10 @@ export default function ComingSoon() {
         {/* <h1>Calle & Siobhán</h1> */}
         
         <div className="castle-container">
-          <img src={castleimg} alt="Bjertorp Slott" className="castle-img" style={{marginTop: '-1rem'}}/>
+          <img src={castleimg} alt="Riksarkivet" className="castle-img" style={{marginTop: '-1rem'}}/>
         </div>
         
-        <p className="fine-print" style={{ fontSize: '1.5rem', marginTop: '-2rem'}}>
+        <p className="fine-print" style={{ fontSize: '1.5rem', marginTop: '-0.5rem'}}>
           19 september 2026
         </p>
         
