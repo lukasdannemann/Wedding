@@ -1,27 +1,15 @@
-import castleimg from '../../assets/castle_img.png';
+import { useLang } from '../../context/LanguageContext';
 
 export default function Festen() {
+    const { t } = useLang();
+
     return (
         <section id="praktiskt" className="section-container">
-            <h2 className="section-title">Praktiskt</h2>
-            
-            <div className="section-content">
-                <p className="typewriter-label">KLÄDKOD</p>
-                <p className="typewriter-text">Mörk kostym</p>
-                
-                <div className="thin-line"></div>
+            <h2 className="section-title">{t.praktiskt.title}</h2>
 
-                <p className="typewriter-label">PRESENTER</p>
-                <p className="typewriter-text">Ge oss presenter !</p>
-                <div className="thin-line"></div>
-                
-                <p className="typewriter-text">
-                    Kvällen fortsätter med middag och dans i slottets festsal. 
-                    Vi ser fram emot en natt fylld av glädje och skratt.
-                </p>
-                
-                {/* Slottet som en subtil dekorativ detalj längst ner */}
-                {/* <img src={castleimg} alt="" className="mini-castle-divider" /> */}
+            <div className="section-content">
+                <p className="typewriter-label">{t.praktiskt.dresscode_label}</p>
+                <p className="typewriter-text">{t.praktiskt.dresscode}</p>
             </div>
         </section>
     );

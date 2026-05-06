@@ -8,26 +8,29 @@ import Navigation from './components/Navigation/Navigation'
 import ScrollToTop from './components/ScrollToTop/ScrollToTop'
 import ScrollToTopBtn from './components/ScrollToTopButton/ScrollToTopBtn'
 import Footer from './components/Footer/Footer'
+import { LanguageProvider } from './context/LanguageContext'
+
 function App() {
 
   return (
-    <Router>
-      <ScrollToTop />
-      <Header />
-      <Navigation />
-      <div className="app">
-        {/* <Navigation /> */}
-        <main className="main-content">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/osa" element={<Osa />} />
-            <Route path="/tal" element={<Tal />} />
-          </Routes>
-        </main>
-      </div>
-      <Footer />
-      <ScrollToTopBtn />
-    </Router>
+    <LanguageProvider>
+      <Router>
+        <ScrollToTop />
+        <Header />
+        <Navigation />
+        <div className="app">
+          <main className="main-content">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/osa" element={<Osa />} />
+              <Route path="/tal" element={<Tal />} />
+            </Routes>
+          </main>
+        </div>
+        <Footer />
+        <ScrollToTopBtn />
+      </Router>
+    </LanguageProvider>
   )
 }
 

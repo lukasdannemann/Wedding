@@ -1,18 +1,15 @@
+import { useLang } from '../../context/LanguageContext';
+
 export default function Dagen() {
+    const { t } = useLang();
+
     return (
         <section id="dagen" className="section-container">
-            <h2 className="section-title">Dagen</h2>
-            <p className="fine-print">Lördagen den 19 september 2026 kl. 15:00</p>
-            
+            <h2 className="section-title">{t.dagen.title}</h2>
+            <p className="fine-print">{t.hero.date}</p>
+
             <div className="section-content">
-                <p className="typewriter-label">PLATS</p>
-                <p className="typewriter-text">Bjertorp Slotts Park</p>
-                <div className="thin-line"></div>
-                
-                <p className="typewriter-text">
-                    Vi lovar varandra evig trohet under ekarna i slottsparken. 
-                    Vid sämre väder flyttar ceremonin in i slottets stora sal.
-                </p>
+                <p className="typewriter-text">{t.dagen.description}</p>
             </div>
         </section>
     );

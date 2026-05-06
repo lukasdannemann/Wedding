@@ -1,20 +1,23 @@
 import './Footer.css';
-import castleimg from '../../assets/castle_img.png';
+import castleimg from '../../assets/riks-arkivet-transparent.png';
+import { useLang } from '../../context/LanguageContext';
 
 export default function Footer() {
+    const { t } = useLang();
+
     return (
         <footer className="footer">
             <div className="footer-inner">
 
                 <div className="footer-text-left">
                     <p className="footer-names">Calle & Siobhán</p>
-                    <p className="footer-venue">Bjertorp Slott, Kvänum</p>
+                    <p className="footer-venue">{t.footer.venue}</p>
                 </div>
 
-                <img src={castleimg} alt="Bjertorp Slott" className="footer-castle" />
+                <img src={castleimg} alt="Gamla Riksarkivet" className="footer-castle" />
 
                 <p className="footer-contact">
-                    Frågor? Kontakta oss på{' '}
+                    {t.footer.contact}{' '}
                     <a href="mailto:calle.siobhan@brollop.se">calle.siobhan@brollop.se</a>
                 </p>
 

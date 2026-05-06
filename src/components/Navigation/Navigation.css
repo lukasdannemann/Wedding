@@ -5,7 +5,7 @@
   padding: 1rem 1rem 1rem 1rem;
   margin: 0 5rem;
   border-bottom: 2px solid var(--color-border);
-  background-color: rgba(244, 238, 224, 0.5);
+  background-color: rgba(250, 248, 245, 0.5);
   backdrop-filter: blur(5px);
   transform: translateZ(0);
   will-change: transform;
@@ -27,7 +27,7 @@
 .navbar a {
   text-decoration: none;
   color: var(--color-burgundy);
-  font-family: "Special Elite", monospace; /* Din skrivmaskinsfont */
+  font-family: "Special Elite", monospace;
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -38,7 +38,7 @@
 .navbar a::after {
   content: "";
   position: absolute;
-  bottom: -2px; /* Placerar strecket precis under texten */
+  bottom: -2px;
   left: 50%;
   width: 0;
   height: 1.5px;
@@ -62,23 +62,72 @@
 
 .navbar a:active {
   opacity: 0.7;
-  transition: none; /* Ingen fördröjning vid själva touchen */
+  transition: none;
 }
 
+/* Language toggle */
+.lang-toggle {
+  position: absolute;
+  right: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.lang-toggle button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: "Special Elite", monospace;
+  font-size: 0.75rem;
+  color: var(--color-burgundy);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0;
+  opacity: 0.4;
+  transition: opacity 0.2s ease;
+}
+
+.lang-toggle button.active {
+  opacity: 1;
+}
+
+.lang-toggle button:hover {
+  opacity: 0.75;
+  background-color: transparent;
+}
+
+.lang-toggle span {
+  color: var(--color-burgundy);
+  opacity: 0.3;
+  font-family: "Special Elite", monospace;
+  font-size: 0.75rem;
+  pointer-events: none;
+}
 
 @media (max-width: 600px) {
     .navbar {
-        margin: 0; /* Tar bort 5rem-marginalen */
+        margin: 0;
         padding: 1rem 0;
     }
 
     .navbar ul {
-        gap: 2rem; /* Krymper gapet från 3rem */
+        gap: 1.2rem;
         padding: 0 5px;
     }
 
     .navbar a {
         font-size: 0.7rem;
         letter-spacing: 0.5px;
+    }
+
+    .lang-toggle {
+        right: 0.75rem;
+    }
+
+    .lang-toggle button {
+        font-size: 0.65rem;
     }
 }

@@ -6,11 +6,11 @@
   min-height: 100vh;
 }
 
-/* Centrerar allt inuti sektionen */
-.section-container {
+/* Scoped till form-page så att det inte skriver över global .section-container */
+.form-page .section-container {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centrerar h2, p och form horisontellt */
+  align-items: center;
   width: 100%;
   padding: 0 20px;
 }
@@ -28,22 +28,21 @@
   flex-direction: column;
   gap: 30px;
   width: 100%;
-  max-width: 450px; /* Begränsar bredden för att det ska se elegant ut */
+  max-width: 450px;
 }
 
 .form-group {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  text-align: center; /* Centrerar labels och hjälpsam text */
+  text-align: center;
 }
 
-/* Lägg till detta bland dina form-stilar i forms.css */
 .form-group select {
-  -webkit-appearance: none; /* Tar bort standardpilen på mobiler */
+  -webkit-appearance: none;
   appearance: none;
-  text-align-last: center; /* Tvingar vald text att centrera sig (annars lägger den sig till vänster) */
-  border-radius: 0; /* Förhindrar att iOS rundar hörnen osynligt */
+  text-align-last: center;
+  border-radius: 0;
 }
 
 .form-group label {
@@ -54,7 +53,6 @@
   letter-spacing: 2px;
 }
 
-/* Centrerar texten inuti input och textarea */
 .form-group input[type="text"],
 .form-group textarea,
 .form-group select {
@@ -65,20 +63,19 @@
   padding: 10px 5px;
   color: var(--color-text);
   outline: none;
-  text-align: center; /* Gör att texten man skriver också är centrerad */
+  text-align: center;
   transition: border-color 0.3s;
 }
 
-.form-group input:focus, 
+.form-group input:focus,
 .form-group textarea:focus {
   border-bottom: 1px solid var(--color-burgundy);
 }
 
-/* Centrerar radioknapparna */
 .radio-group {
   font-family: var(--font-main);
   display: flex;
-  justify-content: center; /* Centrerar Ja/Nej-valen */
+  justify-content: center;
   gap: 30px;
   margin-top: 10px;
 }
@@ -92,7 +89,6 @@
   cursor: pointer;
 }
 
-/* Knappen centrerad och lagom bred */
 .submit-btn {
   margin: 20px auto 0 auto;
   width: 100%;
@@ -113,15 +109,13 @@
   transform: translateY(-2px);
 }
 
-
-/* Lägg till i src/components/forms.css */
 @media (max-width: 600px) {
     .form-page {
         padding-top: 1rem;
     }
 
     .wedding-form {
-        gap: 20px; /* Tätare mellan fälten */
+        gap: 20px;
         margin-top: 20px;
     }
 
@@ -130,7 +124,7 @@
     }
 
     .radio-group {
-        flex-direction: column; /* Stapla Ja/Nej på varandra för lättare klick */
+        flex-direction: column;
         align-items: center;
         gap: 15px;
     }
