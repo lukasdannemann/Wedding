@@ -21,7 +21,7 @@ export default function Festen() {
                 </p>
                 
                 {/* Slottet som en subtil dekorativ detalj längst ner */}
-                <img src={castleimg} alt="" className="mini-castle-divider" />
+                {/* <img src={castleimg} alt="" className="mini-castle-divider" /> */}
             </div>
         </section>
     );
