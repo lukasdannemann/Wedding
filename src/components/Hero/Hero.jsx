@@ -1,5 +1,5 @@
 import './Hero.css';
-import castleimg from '../../assets/castle_img.png';
+import castleimg from '../../assets/riks-arkivet-transparent.png';
 
 export default function Hero() {
     return (
