@@ -102,7 +102,7 @@ li {
 /* Lägg till/uppdatera i src/index.css */
 
 .section-container {
-    padding: 100px 20px;
+    padding: 60px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -117,7 +117,7 @@ li {
 }
 
 .section-content {
-    margin-top: 3rem;
+    margin-top: 1.5rem;
     width: 100%;
 }
 
@@ -142,37 +142,37 @@ li {
     max-width: 300px;
     height: 0;
     border-top: 1px solid var(--color-border);
-    margin: 2rem auto;
+    margin: 1.25rem auto;
 }
 
 .mini-castle-divider {
     width: 60px;
     height: auto;
     opacity: 0.3;
-    margin-top: 4rem;
+    margin-top: 2rem;
 }
 
 /* Lägg till längst ner i src/index.css */
 @media (max-width: 600px) {
     .section-container {
-        padding: 50px 20px; /* Minskar padding från 100px */
+        padding: 35px 20px;
     }
 
     .section-title {
-        font-size: 1.6rem; /* Minskar från 2rem */
-        letter-spacing: 0.3rem; /* Något tätare */
+        font-size: 1.6rem;
+        letter-spacing: 0.3rem;
     }
 
     .section-content {
-        margin-top: 2rem; /* Mindre avstånd till innehållet */
+        margin-top: 1.25rem;
     }
 
     .typewriter-text {
-        font-size: 0.95rem; /* Bättre läsbarhet på liten skärm */
+        font-size: 0.95rem;
         line-height: 1.6;
     }
 
     .thin-line {
-        margin: 1.5rem auto; /* Mindre luft runt linjerna */
+        margin: 1rem auto;
     }
 }

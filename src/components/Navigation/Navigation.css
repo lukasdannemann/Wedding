@@ -27,7 +27,7 @@
 .navbar a {
   text-decoration: none;
   color: var(--color-burgundy);
-  font-family: "Special Elite", monospace;
+  font-family: 'Cutive Mono', monospace;
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -80,8 +80,8 @@
   background: none;
   border: none;
   cursor: pointer;
-  font-family: "Special Elite", monospace;
-  font-size: 0.75rem;
+  font-family: 'Cutive Mono', monospace;
+  font-size: 0.55rem;
   color: var(--color-burgundy);
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -102,9 +102,23 @@
 .lang-toggle span {
   color: var(--color-burgundy);
   opacity: 0.3;
-  font-family: "Special Elite", monospace;
-  font-size: 0.75rem;
+  font-family: 'Cutive Mono', monospace;
+  font-size: 0.55rem;
   pointer-events: none;
+}
+
+@media (max-width: 800px) and (min-width: 601px) {
+    .navbar {
+        margin: 0 1.5rem;
+    }
+
+    .navbar ul {
+        gap: 1.5rem;
+    }
+
+    .navbar a {
+        font-size: 0.78rem;
+    }
 }
 
 @media (max-width: 600px) {
@@ -128,6 +142,10 @@
     }
 
     .lang-toggle button {
-        font-size: 0.65rem;
+        font-size: 0.55rem;
+    }
+
+    .lang-toggle span {
+        font-size: 0.55rem;
     }
 }

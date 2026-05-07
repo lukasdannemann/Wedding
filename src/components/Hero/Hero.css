@@ -1,7 +1,7 @@
 .hero-section {
     text-align: center;
     margin: 0;
-    padding: 3rem 0 0;
+    padding: 1.5rem 0 0;
 }
 
 .hero-intro {
@@ -21,7 +21,7 @@
 }
 
 .castle-container {
-    margin-top: 2.5rem;
+    margin-top: 1rem;
 }
 
 .castle-img {
@@ -34,7 +34,7 @@
 
 @media (max-width: 600px) {
     .hero-section {
-        padding-top: 2rem;
+        padding-top: 1rem;
     }
 
     .hero-intro {
@@ -50,6 +50,6 @@
     }
 
     .castle-container {
-        margin-top: 1.75rem;
+        margin-top: 0.75rem;
     }
 }

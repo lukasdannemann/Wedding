@@ -93,19 +93,21 @@
   margin: 20px auto 0 auto;
   width: 100%;
   max-width: 250px;
-  background-color: var(--color-burgundy);
-  color: white;
+  background-color: transparent;
+  color: var(--color-burgundy);
   font-family: var(--font-main);
+  font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 2px;
-  padding: 15px;
-  border: none;
+  padding: 14px 20px;
+  border: 1px solid var(--color-burgundy);
   cursor: pointer;
-  transition: transform 0.2s, opacity 0.3s;
+  transition: background-color 0.25s ease, color 0.25s ease, transform 0.2s ease;
 }
 
 .submit-btn:hover {
-  opacity: 0.9;
+  background-color: var(--color-burgundy);
+  color: white;
   transform: translateY(-2px);
 }
 
