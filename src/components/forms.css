@@ -114,6 +114,8 @@
 @media (max-width: 600px) {
     .form-page {
         padding-top: 1rem;
+        min-height: auto;
+        justify-content: flex-start;
     }
 
     .wedding-form {

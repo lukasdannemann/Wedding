@@ -22,6 +22,7 @@
     font-size: 1.1rem;
     line-height: 1.8;
     color: var(--color-text);
+    margin-top: 4rem;
 }
 
 .castle-container {

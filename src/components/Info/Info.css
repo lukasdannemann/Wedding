@@ -1,0 +1,33 @@
+.info-section {
+    text-align: center;
+    gap: 1.5rem;
+    padding-top: 30px;
+}
+
+.info-section .thin-line {
+    margin: 0 auto 1rem;
+}
+
+.info-block {
+    width: 100%;
+}
+
+.info-block .typewriter-label {
+    margin-bottom: 0.4rem;
+}
+
+.info-block .typewriter-text {
+    margin-bottom: 0;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+    .info-section {
+        gap: 1.25rem;
+    }
+
+    .info-block .typewriter-text {
+        font-size: 0.95rem;
+    }
+}

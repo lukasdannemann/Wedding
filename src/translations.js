@@ -1,29 +1,21 @@
 export const translations = {
   sv: {
     nav: {
-      dagen: 'Dagen',
-      plats: 'Plats',
-      praktiskt: 'Praktiskt',
+      hem: 'Hem',
       osa: 'OSA',
       tal: 'Tal',
     },
     hero: {
-      intro: 'Välkomna till vårt bröllopsfirande! Vi firar det på Gamla Riksarkivet. Vi kommer att ha en mindre vigsel med våra närmaste, därefter klockan 16.00 välkomnar vi alla för mingel, följt av en middag och fest!',
+      intro: 'Välkommen till vårt bröllop på Gamla Riksarkivet i Stockholm. Vi har en mindre vigsel med våra närmaste, därefter klockan 16:00 välkomnar vi alla för mingel, följt av middag och fest.',
       date: 'Lördagen den 19 september 2026',
     },
-    dagen: {
-      title: 'Dagen',
-      description: 'Vi kommer att ha en mindre vigsel med våra närmaste, därefter klockan 16.00 välkomnar vi alla för mingel, följt av en middag och fest!',
-    },
-    plats: {
-      title: 'Plats',
-      label: 'DATUM, TID & PLATS',
-      text: 'Lördagen den 2026-09-19 klockan 16:00 på Gamla Riksarkivet på Riddarholmen i Stockholm.',
-    },
-    praktiskt: {
-      title: 'Praktiskt',
+    info: {
+      datetime_label: 'DATUM & TID',
+      datetime: '19 september 2026 · 16:00',
+      location_label: 'PLATS',
+      location: 'Gamla Riksarkivet, Riddarholmen, Stockholm',
       dresscode_label: 'KLÄDKOD',
-      dresscode: 'Mörk kavaj.',
+      dresscode: 'Mörk kavaj',
     },
     footer: {
       contact: 'Frågor? Kontakta oss på',
@@ -63,29 +55,21 @@ export const translations = {
   },
   en: {
     nav: {
-      dagen: 'The Day',
-      plats: 'Location',
-      praktiskt: 'Practical',
+      hem: 'Home',
       osa: 'RSVP',
       tal: 'Speech',
     },
     hero: {
-      intro: 'Welcome to our wedding! We are celebrating at Gamla Riksarkivet in Stockholm. We will have a ceremony for the closest family, thereafter all guests are welcome for a pre-drink followed by dinner and a party!',
+      intro: 'Welcome to our wedding at Gamla Riksarkivet in Stockholm. We will have a small ceremony with our closest, then at 4:00 PM all guests are welcome for a pre-drink, followed by dinner and a party.',
       date: 'Saturday 19 September 2026',
     },
-    dagen: {
-      title: 'The Day',
-      description: 'We will have a ceremony for the closest family, thereafter at 4:00 PM all guests are welcome for a pre-drink followed by dinner and a party!',
-    },
-    plats: {
-      title: 'Location',
-      label: 'DATE, TIME & ADDRESS',
-      text: 'Saturday 2026-09-19 4:00 PM, at Gamla Riksarkivet, Riddarholmen, Stockholm.',
-    },
-    praktiskt: {
-      title: 'Practical',
+    info: {
+      datetime_label: 'DATE & TIME',
+      datetime: '19 September 2026 · 4:00 PM',
+      location_label: 'LOCATION',
+      location: 'Gamla Riksarkivet, Riddarholmen, Stockholm',
       dresscode_label: 'DRESS CODE',
-      dresscode: 'Dark suit.',
+      dresscode: 'Dark suit',
     },
     footer: {
       contact: 'Questions? Contact us at',
@@ -93,7 +77,7 @@ export const translations = {
     },
     osa: {
       header: 'R.S.V.P.',
-      deadline: 'Please reply by 1 July 2026',
+      deadline: 'Please reply by 19th of august 2026',
       name_label: 'Name of all guests',
       name_placeholder: 'First name Last name',
       attendance_label: 'Will you attend?',
