@@ -5,6 +5,16 @@ export const translations = {
       osa: 'OSA',
       tal: 'Tal',
     },
+    gate: {
+      label: 'VILKET ÅR TRÄFFADES VI?',
+      submit: 'Öppna inbjudan',
+      error: 'Fel kod, försök igen',
+    },
+    error: {
+      title: 'Sidan finns inte',
+      text: 'Länken kanske är gammal eller felskriven. Inga problem.',
+      button: 'Till startsidan',
+    },
     hero: {
       intro: 'Välkommen till vårt bröllop på Gamla Riksarkivet i Stockholm. Vi har en mindre vigsel med våra närmaste, därefter klockan 16:00 välkomnar vi alla för mingel, följt av middag och fest.',
       date: 'Lördagen den 19 september 2026',
@@ -58,6 +68,16 @@ export const translations = {
       hem: 'Home',
       osa: 'RSVP',
       tal: 'Speech',
+    },
+    gate: {
+      label: 'WHAT YEAR DID WE MEET?',
+      submit: 'Open invitation',
+      error: 'Incorrect code, please try again',
+    },
+    error: {
+      title: 'Page not found',
+      text: 'The link might be outdated or mistyped. No worries.',
+      button: 'Back to home',
     },
     hero: {
       intro: 'Welcome to our wedding at Gamla Riksarkivet in Stockholm. We will have a small ceremony with our closest, then at 4:00 PM all guests are welcome for a pre-drink, followed by dinner and a party.',
