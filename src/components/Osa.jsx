@@ -2,23 +2,44 @@ import { useState } from 'react';
 import './forms.css';
 import { useLang } from '../context/LanguageContext';
 
+const OSA_ENDPOINT = "https://script.google.com/macros/s/AKfycbxvzEnaWFFOK18SqS65JtlHmaYqUY6W0NN1-b1xv_kpB_u2th022x897qAriqITZYzo/exec";
+
 export default function Osa() {
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [guests, setGuests] = useState([{ name: '', allergies: '' }]);
   const { t } = useLang();
   const f = t.osa;
 
+  const addGuest = () => {
+    setGuests([...guests, { name: '', allergies: '' }]);
+  };
+
+  const removeGuest = (index) => {
+    setGuests(guests.filter((_, i) => i !== index));
+  };
+
+  const updateGuest = (index, field, value) => {
+    setGuests(guests.map((g, i) => (i === index ? { ...g, [field]: value } : g)));
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    const form = e.target;
-    const formData = new FormData(form);
+    const formData = new FormData(e.target);
 
-    fetch("https://script.google.com/macros/s/AKfycbxvzEnaWFFOK18SqS65JtlHmaYqUY6W0NN1-b1xv_kpB_u2th022x897qAriqITZYzo/exec", {
+    // Lägg på gäst-fälten manuellt eftersom de är controlled och saknar name-attribut
+    formData.append('guestCount', guests.length);
+    guests.forEach((g, i) => {
+      formData.append(`name${i + 1}`, g.name);
+      formData.append(`allergies${i + 1}`, g.allergies);
+    });
+
+    fetch(OSA_ENDPOINT, {
       method: "POST",
       mode: "no-cors",
-      body: formData
-    }).then(() => {
-      setIsSubmitted(true);
-    }).catch(error => console.error("Något gick fel", error));
+      body: formData,
+    })
+      .then(() => setIsSubmitted(true))
+      .catch((error) => console.error("Något gick fel", error));
   };
 
   return (
@@ -35,11 +56,6 @@ export default function Osa() {
         ) : (
           <form onSubmit={handleSubmit} className="wedding-form">
             <div className="form-group">
-              <label htmlFor="name">{f.name_label}</label>
-              <input type="text" id="name" name="name" required placeholder={f.name_placeholder} />
-            </div>
-
-            <div className="form-group">
               <label>{f.attendance_label}</label>
               <div className="radio-group">
                 <label><input type="radio" name="attendance" value={f.yes} required /> {f.yes}</label>
@@ -47,10 +63,49 @@ export default function Osa() {
               </div>
             </div>
 
-            <div className="form-group">
-              <label htmlFor="allergies">{f.allergies_label}</label>
-              <input type="text" id="allergies" name="allergies" placeholder={f.allergies_placeholder} />
-            </div>
+            {guests.map((guest, index) => (
+              <div className="guest-block" key={index}>
+                <div className="guest-header">
+                  <span className="guest-number">{f.guest} {index + 1}</span>
+                  {guests.length > 1 && (
+                    <button
+                      type="button"
+                      onClick={() => removeGuest(index)}
+                      className="remove-guest-btn"
+                    >
+                      {f.remove_guest}
+                    </button>
+                  )}
+                </div>
+
+                <div className="form-group">
+                  <label htmlFor={`name-${index}`}>{f.name_label}</label>
+                  <input
+                    type="text"
+                    id={`name-${index}`}
+                    value={guest.name}
+                    onChange={(e) => updateGuest(index, 'name', e.target.value)}
+                    required
+                    placeholder={f.name_placeholder}
+                  />
+                </div>
+
+                <div className="form-group">
+                  <label htmlFor={`allergies-${index}`}>{f.allergies_label}</label>
+                  <input
+                    type="text"
+                    id={`allergies-${index}`}
+                    value={guest.allergies}
+                    onChange={(e) => updateGuest(index, 'allergies', e.target.value)}
+                    placeholder={f.allergies_placeholder}
+                  />
+                </div>
+              </div>
+            ))}
+
+            <button type="button" onClick={addGuest} className="add-guest-btn">
+              + {f.add_guest}
+            </button>
 
             <div className="form-group">
               <label htmlFor="message">{f.message_label}</label>

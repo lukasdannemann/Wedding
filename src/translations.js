@@ -6,7 +6,7 @@ export const translations = {
       tal: 'Tal',
     },
     gate: {
-      label: 'VILKET ÅR TRÄFFADES VI?',
+      label: 'KOD FRÅN INBJUDAN:',
       submit: 'Öppna inbjudan',
       error: 'Fel kod, försök igen',
     },
@@ -16,16 +16,27 @@ export const translations = {
       button: 'Till startsidan',
     },
     hero: {
-      intro: 'Välkommen till vårt bröllop på Gamla Riksarkivet i Stockholm. Vi har en mindre vigsel med våra närmaste, därefter klockan 16:00 välkomnar vi alla för mingel, följt av middag och fest.',
+      intro: 'Välkommen till vårt bröllop på Gamla Riksarkivet. Vigsel äger rum på plats klockan 15:00, därefter blir det mingel följt av middag och fest.',
       date: 'Lördagen den 19 september 2026',
     },
     info: {
       datetime_label: 'DATUM & TID',
-      datetime: '19 september 2026 · 16:00',
+      datetime: '19 september 2026 · 15:00',
       location_label: 'PLATS',
       location: 'Gamla Riksarkivet, Riddarholmen, Stockholm',
       dresscode_label: 'KLÄDKOD',
       dresscode: 'Mörk kavaj',
+      // additionalInfo_label: 'BRA ATT VETA',
+      // additionalInfo: [
+      //   {
+      //     gifts_label: 'Gåvor',
+      //     gifts: 'Vi tar gärna emot gåvor'
+      //   },
+      //     {
+      //       holdingTimes_label: 'Hålltider',
+      //       holdingTimes: ['Vigsel: 15:00', 'Middag: 17:00', 'Lokal stänger: 02:00']
+      //     }
+      // ]
     },
     footer: {
       contact: 'Frågor? Kontakta oss på',
@@ -34,18 +45,21 @@ export const translations = {
     osa: {
       header: 'O.S.A.',
       deadline: 'Vänligen svara senast den 19:e augusti 2026',
-      name_label: 'Namn på samtliga gäster',
+      name_label: 'Namn',
       name_placeholder: 'Förnamn Efternamn',
       attendance_label: 'Kommer ni?',
       yes: 'Ja, vi kommer!',
       no: 'Tyvärr kan vi inte',
       allergies_label: 'Allergier eller specialkost',
-      allergies_placeholder: 'T.ex. 1 gluten, 2 vegetariskt',
+      allergies_placeholder: 'T.ex. gluten',
       message_label: 'Hälsning till brudparet',
       message_placeholder: 'Skriv en hälsning...',
       submit: 'Skicka svar',
       thanks_title: 'Tack för ditt svar!',
       thanks_text: 'Vi ser fram emot att fira tillsammans med er!',
+      guest: 'Gäst',
+      add_guest: 'Lägg till gäst',
+      remove_guest: 'Ta bort',
     },
     tal: {
       header: 'Anmäl Tal',
@@ -60,6 +74,8 @@ export const translations = {
       requirements_label: 'Behöver du teknik? (Mikrofon, projektor etc.)',
       requirements_placeholder: 'T.ex. Ja, en mikrofon',
       submit: 'Anmäl till toastmastern',
+      thanks_title: 'Tack för din anmälan!',
+      thanks_text: 'Toastmastern har fått din information och hör av sig om det behövs.',
     },
   },
   en: {
@@ -69,7 +85,7 @@ export const translations = {
       tal: 'Speech',
     },
     gate: {
-      label: 'WHAT YEAR DID WE MEET?',
+      label: 'CODE FROM THE INVITATION:',
       submit: 'Open invitation',
       error: 'Incorrect code, please try again',
     },
@@ -79,16 +95,27 @@ export const translations = {
       button: 'Back to home',
     },
     hero: {
-      intro: 'Welcome to our wedding at Gamla Riksarkivet in Stockholm. We will have a small ceremony with our closest, then at 4:00 PM all guests are welcome for a pre-drink, followed by dinner and a party.',
+      intro: "Welcome to our wedding at Gamla Riksarkivet. The ceremony will take place on-site at 3:00 PM, followed by a reception, dinner, and dancing.",
       date: 'Saturday 19 September 2026',
     },
     info: {
       datetime_label: 'DATE & TIME',
-      datetime: '19 September 2026 · 4:00 PM',
+      datetime: '19 September 2026 · 3:00 PM',
       location_label: 'LOCATION',
       location: 'Gamla Riksarkivet, Riddarholmen, Stockholm',
       dresscode_label: 'DRESS CODE',
       dresscode: 'Dark suit',
+      // additionalInfo_label: 'GOOD TO KNOW',
+      // additionalInfo: [
+      //   {
+      //     gifts_label: 'Gifts',
+      //     gifts: 'We would like to receive gifts'
+      //   },
+      //   {
+      //     holdingTimes_label: 'Schedule',
+      //     holdingTimes: ['Ceremony - 3:00 PM', 'Dinner - 5:00 PM', 'Building closes - 02:00 AM']
+      //   }
+      // ]
     },
     footer: {
       contact: 'Questions? Contact us at',
@@ -97,32 +124,37 @@ export const translations = {
     osa: {
       header: 'R.S.V.P.',
       deadline: 'Please reply by 19th of august 2026',
-      name_label: 'Name of all guests',
+      name_label: 'Name',
       name_placeholder: 'First name Last name',
       attendance_label: 'Will you attend?',
       yes: 'Yes, we will be there!',
       no: 'Unfortunately we cannot make it',
       allergies_label: 'Allergies or dietary requirements',
-      allergies_placeholder: 'E.g. 2 vegan, 1 nut allergy...',
+      allergies_placeholder: 'E.g. nut allergy',
       message_label: 'Message to the couple',
       message_placeholder: 'Write a message...',
       submit: 'Send reply',
       thanks_title: 'Thank you!',
       thanks_text: 'We look forward to celebrating with you!',
+      guest: 'Guest',
+      add_guest: 'Add guest',
+      remove_guest: 'Remove',
     },
     tal: {
       header: 'Register a Speech',
-      subtext: 'Would you like to make a speech? Fill in the form to inform the toastmaster!',
+      subtext: 'Would you like to make a speech? Fill in the form to notify the toastmaster!',
       name_label: 'Your name',
       contact_label: 'Email or phone',
       contact_placeholder: 'So we can reach you',
       type_label: 'What would you like to do?',
       opt_tal: 'Give a speech',
-      opt_video: 'Show a video',
+      opt_video: 'Show a video/slideshow',
       opt_annat: 'Other',
       requirements_label: 'Do you need any equipment? (Microphone, projector etc.)',
       requirements_placeholder: 'E.g. Yes, a microphone',
       submit: 'Send to the toastmaster',
+      thanks_title: 'Thank you for registering!',
+      thanks_text: 'The toastmaster has received your information and will reach out if needed.',
     },
   },
 };

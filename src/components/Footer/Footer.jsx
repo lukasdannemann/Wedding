@@ -18,7 +18,7 @@ export default function Footer() {
 
                 <p className="footer-contact">
                     {t.footer.contact}{' '}
-                    <a href="mailto:calle.siobhan@brollop.se">calle.siobhan@brollop.se</a>
+                    <a href="mailto:siobhan.jansson@gmail.com">siobhan.jansson@gmail.com</a>
                 </p>
 
             </div>

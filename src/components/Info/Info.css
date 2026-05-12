@@ -22,6 +22,41 @@
     line-height: 1.5;
 }
 
+/* Underrubriker inom "Bra att veta" */
+.info-sub-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.1rem;
+    margin-top: 1.5rem;
+}
+
+.info-sub-block {
+    width: 100%;
+    max-width: 420px;
+}
+
+.info-sub-label {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: var(--color-burgundy);
+    font-size: 1.05rem;
+    letter-spacing: 0.04em;
+    margin: 0 0 0.25rem;
+    opacity: 0.9;
+}
+
+.info-sub-block .info-sub-text {
+    font-size: 0.95rem;
+    line-height: 1.55;
+    margin: 0;
+}
+
+/* När hålltider renderas som flera rader — tightare avstånd mellan dem */
+.info-sub-block .info-sub-text + .info-sub-text {
+    margin-top: 0.1rem;
+}
+
 @media (max-width: 600px) {
     .info-section {
         gap: 1.25rem;
@@ -29,5 +64,17 @@
 
     .info-block .typewriter-text {
         font-size: 0.95rem;
+    }
+
+    .info-sub-list {
+        gap: 0.9rem;
+    }
+
+    .info-sub-label {
+        font-size: 1rem;
+    }
+
+    .info-sub-block .info-sub-text {
+        font-size: 0.9rem;
     }
 }

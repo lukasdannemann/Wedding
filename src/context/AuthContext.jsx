@@ -2,7 +2,7 @@ import { createContext, useContext, useState } from 'react';
 
 // Ändra koden här när du vill byta. Det är klientsida — alltså ingen
 // riktig säkerhet, bara en mjuk grind så obehöriga inte snubblar in.
-const ACCESS_CODE = '2026';
+const ACCESS_CODE = '1910';
 const STORAGE_KEY = 'wedding-access';
 
 const AuthContext = createContext(null);
@@ -10,7 +10,7 @@ const AuthContext = createContext(null);
 export function AuthProvider({ children }) {
   const [isLoggedIn, setIsLoggedIn] = useState(() => {
     try {
-      return localStorage.getItem(STORAGE_KEY) === 'false';
+      return localStorage.getItem(STORAGE_KEY) === 'true';
     } catch {
       return false;
     }
