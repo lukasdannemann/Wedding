@@ -28,7 +28,6 @@ export default function Tal() {
             <label htmlFor="speech-type">{f.type_label}</label>
             <select id="speech-type" name="type">
               <option value="tal">{f.opt_tal}</option>
-              <option value="spex">{f.opt_spex}</option>
               <option value="video">{f.opt_video}</option>
               <option value="annat">{f.opt_annat}</option>
             </select>
