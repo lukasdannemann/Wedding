@@ -6,6 +6,7 @@ const OSA_ENDPOINT = "https://script.google.com/macros/s/AKfycbxvzEnaWFFOK18SqS6
 
 export default function Osa() {
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const [guests, setGuests] = useState([{ name: '', allergies: '' }]);
   const { t } = useLang();
   const f = t.osa;
@@ -24,6 +25,9 @@ export default function Osa() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (isLoading) return;
+    setIsLoading(true);
+
     const formData = new FormData(e.target);
 
     // Lägg på gäst-fälten manuellt eftersom de är controlled och saknar name-attribut
@@ -39,7 +43,10 @@ export default function Osa() {
       body: formData,
     })
       .then(() => setIsSubmitted(true))
-      .catch((error) => console.error("Något gick fel", error));
+      .catch((error) => {
+        console.error("Något gick fel", error);
+        setIsLoading(false);
+      });
   };
 
   return (
@@ -112,7 +119,20 @@ export default function Osa() {
               <input type="text" id="message" name="message" placeholder={f.message_placeholder} />
             </div>
 
-            <button type="submit" className="submit-btn">{f.submit}</button>
+            <button
+              type="submit"
+              className={`submit-btn ${isLoading ? 'is-loading' : ''}`}
+              disabled={isLoading}
+            >
+              {isLoading ? (
+                <>
+                  {f.sending}
+                  <span className="loading-dots"><span>.</span><span>.</span><span>.</span></span>
+                </>
+              ) : (
+                f.submit
+              )}
+            </button>
           </form>
         )}
       </section>

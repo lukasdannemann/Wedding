@@ -111,6 +111,42 @@
   transform: translateY(-2px);
 }
 
+/* Loading-tillstånd — disablar interaktion och tonar ned visuellt */
+.submit-btn.is-loading,
+.submit-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.submit-btn.is-loading:hover {
+  background-color: transparent;
+  color: var(--color-burgundy);
+  transform: none;
+}
+
+/* Animerade prickar efter "Skickar" */
+.loading-dots {
+  display: inline-block;
+  margin-left: 2px;
+  letter-spacing: 0.05em;
+}
+
+.loading-dots span {
+  display: inline-block;
+  opacity: 0;
+  animation: dot-fade 1.4s infinite ease-in-out;
+}
+
+.loading-dots span:nth-child(1) { animation-delay: 0s; }
+.loading-dots span:nth-child(2) { animation-delay: 0.2s; }
+.loading-dots span:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes dot-fade {
+  0%, 60%, 100% { opacity: 0; }
+  30% { opacity: 1; }
+}
+
 /* Gäst-block (en per gäst) */
 .guest-block {
   display: flex;

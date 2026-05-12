@@ -8,11 +8,15 @@ const TAL_ENDPOINT = "https://script.google.com/macros/s/AKfycbxNwT66Uq1c5hyRVPC
 
 export default function Tal() {
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const { t } = useLang();
   const f = t.tal;
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (isLoading) return;
+    setIsLoading(true);
+
     const form = e.target;
     const formData = new FormData(form);
 
@@ -22,7 +26,10 @@ export default function Tal() {
       body: formData
     }).then(() => {
       setIsSubmitted(true);
-    }).catch(error => console.error("Något gick fel", error));
+    }).catch(error => {
+      console.error("Något gick fel", error);
+      setIsLoading(false);
+    });
   };
 
   return (
@@ -64,7 +71,20 @@ export default function Tal() {
               <input type="text" id="requirements" name="requirements" placeholder={f.requirements_placeholder} />
             </div>
 
-            <button type="submit" className="submit-btn">{f.submit}</button>
+            <button
+              type="submit"
+              className={`submit-btn ${isLoading ? 'is-loading' : ''}`}
+              disabled={isLoading}
+            >
+              {isLoading ? (
+                <>
+                  {f.sending}
+                  <span className="loading-dots"><span>.</span><span>.</span><span>.</span></span>
+                </>
+              ) : (
+                f.submit
+              )}
+            </button>
           </form>
         )}
       </section>
