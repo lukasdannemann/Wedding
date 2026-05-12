@@ -49,7 +49,7 @@ export default function Tal() {
 
             <div className="form-group">
               <label htmlFor="speaker-name">{f.name_label}</label>
-              <input type="text" id="speaker-name" name="name" required />
+              <input type="text" id="speaker-name" name="name" required placeholder={f.name_placeholder} />
             </div>
 
             <div className="form-group">

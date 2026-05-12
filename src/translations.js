@@ -66,6 +66,7 @@ export const translations = {
       header: 'Anmäl Tal',
       subtext: 'Vill du hålla tal? Fyll i formuläret för att meddela toastmastern!',
       name_label: 'Ditt namn',
+      name_placeholder: 'Förnamn Efternamn',
       contact_label: 'E-post eller telefon',
       contact_placeholder: 'Så vi kan nå dig',
       type_label: 'Vad vill du göra?',
