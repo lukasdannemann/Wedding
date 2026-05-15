@@ -154,6 +154,7 @@
   gap: 20px;
   padding: 20px;
   border: 1px dashed var(--color-border);
+  border-radius: 10px;
 }
 
 .guest-block:first-of-type {
