@@ -16,7 +16,7 @@ export const translations = {
       button: 'Till startsidan',
     },
     hero: {
-      intro: ["Välkommen till vårt bröllop på Gamla Riksarkivet. Vigsel äger rum på plats klockan 15:00, därefter blir det mingel följt av middag och fest.",
+      intro: ["Välkommen till vårt bröllop på Gamla Riksarkivet! Vigsel äger rum på plats klockan 15:00, därefter blir det mingel följt av middag och fest.",
         "Mer detaljerad info kommer närmare inpå bröllopsdagen."
       ],
       date: 'Lördagen den 19 september 2026',
