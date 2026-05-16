@@ -46,7 +46,7 @@ export const translations = {
     },
     osa: {
       header: 'O.S.A.',
-      deadline: 'Här kan du meddela din närvaro. Vänligen OSA senast den 19:e augusti. Fyll i uppgifter för alla i ditt sällskap!',
+      deadline: 'Här kan du meddela din närvaro! Vänligen OSA senast den 19:e augusti. Fyll i uppgifter för alla i ditt sällskap.',
       name_label: 'Namn',
       name_placeholder: 'Förnamn Efternamn',
       attendance_label: 'Kommer ni?',
