@@ -153,6 +153,7 @@ export const translations = {
       header: 'Register a Speech',
       subtext: 'Would you like to make a speech? Fill in the form to notify the toastmaster!',
       name_label: 'Your name',
+      name_placeholder: 'First name Last name',
       contact_label: 'Email or phone',
       contact_placeholder: 'So we can reach you',
       type_label: 'What would you like to do?',
