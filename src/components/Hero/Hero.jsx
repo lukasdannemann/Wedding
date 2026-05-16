@@ -12,7 +12,9 @@ export default function Hero() {
             </div>
             <div className='hero-intro'>
                 <p className='fine-print'>{t.hero.date}</p>
-                <p className='typewriter'>{t.hero.intro}</p>
+                {t.hero.intro.map((paragraph, i) => (
+                    <p key={i} className='typewriter'>{paragraph}</p>
+                ))}
             </div>
         </section>
     );

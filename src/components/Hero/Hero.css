@@ -25,6 +25,10 @@
     margin-top: 4rem;
 }
 
+.hero-intro .typewriter + .typewriter {
+    margin-top: 1rem;
+}
+
 .castle-container {
     margin-top: 1rem;
 }

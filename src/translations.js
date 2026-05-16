@@ -16,7 +16,9 @@ export const translations = {
       button: 'Till startsidan',
     },
     hero: {
-      intro: 'Välkommen till vårt bröllop på Gamla Riksarkivet. Vigsel äger rum på plats klockan 15:00, därefter blir det mingel följt av middag och fest.',
+      intro: ["Välkommen till vårt bröllop på Gamla Riksarkivet. Vigsel äger rum på plats klockan 15:00, därefter blir det mingel följt av middag och fest.",
+        "Mer detaljerad info kommer närmare inpå bröllopsdagen."
+      ],
       date: 'Lördagen den 19 september 2026',
     },
     info: {
@@ -44,7 +46,7 @@ export const translations = {
     },
     osa: {
       header: 'O.S.A.',
-      deadline: 'Vänligen svara senast den 19:e augusti 2026',
+      deadline: 'Här kan du meddela din närvaro. Vänligen OSA senast den 19:e augusti. Fyll i uppgifter för alla i ditt sällskap!',
       name_label: 'Namn',
       name_placeholder: 'Förnamn Efternamn',
       attendance_label: 'Kommer ni?',
@@ -98,7 +100,10 @@ export const translations = {
       button: 'Back to home',
     },
     hero: {
-      intro: "Welcome to our wedding at Gamla Riksarkivet. The ceremony will take place on-site at 3:00 PM, followed by a reception, dinner, and dancing.",
+      intro: [
+        "Welcome to our wedding at Gamla Riksarkivet! The ceremony will take place on-site at 3:00 PM, followed by a reception, dinner, and party.",
+        "More detailed info will be available closer to the wedding day."
+      ],
       date: 'Saturday 19 September 2026',
     },
     info: {
@@ -126,13 +131,13 @@ export const translations = {
     },
     osa: {
       header: 'R.S.V.P.',
-      deadline: 'Please reply by 19th of august 2026',
+      deadline: 'Let us know if you will attend! Please reply by the 19th of August. Fill in details for everyone in your party.',
       name_label: 'Name',
       name_placeholder: 'First name Last name',
       attendance_label: 'Will you attend?',
       yes: 'Yes, we will be there!',
       no: 'Unfortunately we cannot make it',
-      allergies_label: 'Allergies or dietary requirements',
+      allergies_label: 'Allergies or dietary requests',
       allergies_placeholder: 'E.g. nut allergy',
       message_label: 'Message to the couple',
       message_placeholder: 'Write a message...',
