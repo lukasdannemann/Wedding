@@ -1,39 +1,140 @@
-import './forms.css'
+import { useState } from 'react';
+import './forms.css';
+import { useLang } from '../context/LanguageContext';
+
+const OSA_ENDPOINT = "https://script.google.com/macros/s/AKfycbxvzEnaWFFOK18SqS65JtlHmaYqUY6W0NN1-b1xv_kpB_u2th022x897qAriqITZYzo/exec";
 
 export default function Osa() {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [guests, setGuests] = useState([{ name: '', allergies: '' }]);
+  const { t } = useLang();
+  const f = t.osa;
+
+  const addGuest = () => {
+    setGuests([...guests, { name: '', allergies: '' }]);
+  };
+
+  const removeGuest = (index) => {
+    setGuests(guests.filter((_, i) => i !== index));
+  };
+
+  const updateGuest = (index, field, value) => {
+    setGuests(guests.map((g, i) => (i === index ? { ...g, [field]: value } : g)));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (isLoading) return;
+    setIsLoading(true);
+
+    const formData = new FormData(e.target);
+
+    // Lägg på gäst-fälten manuellt eftersom de är controlled och saknar name-attribut
+    formData.append('guestCount', guests.length);
+    guests.forEach((g, i) => {
+      formData.append(`name${i + 1}`, g.name);
+      formData.append(`allergies${i + 1}`, g.allergies);
+    });
+
+    fetch(OSA_ENDPOINT, {
+      method: "POST",
+      mode: "no-cors",
+      body: formData,
+    })
+      .then(() => setIsSubmitted(true))
+      .catch((error) => {
+        console.error("Något gick fel", error);
+        setIsLoading(false);
+      });
+  };
+
   return (
     <div className="content-wrapper form-page">
       <section className="section-container">
-        <h2 className="form-header">O.S.A.</h2>
-        <p className="fine-print">Vänligen svara senast den 1 juli 2026</p>
-        
-        {/* Ersätt 'DIN_FORMSPREE_ID' senare */}
-        <form action="https://formspree.io/f/DIN_FORMSPREE_ID" method="POST" className="wedding-form">
-          <div className="form-group">
-            <label htmlFor="name">Namn på samtliga gäster</label>
-            <input type="text" id="name" name="name" required placeholder="Förnamn Efternamn" />
-          </div>
+        <h2 className="form-header">{f.header}</h2>
+        <p className="fine-print">{f.deadline}</p>
 
-          <div className="form-group">
-            <label>Kommer ni?</label>
-            <div className="radio-group">
-              <label><input type="radio" name="attendance" value="ja" required /> Ja, vi kommer!</label>
-              <label><input type="radio" name="attendance" value="nej" /> Tyvärr kan vi inte</label>
+        {isSubmitted ? (
+          <div className="thank-you-message" style={{ marginTop: '50px', textAlign: 'center' }}>
+            <h3>{f.thanks_title}</h3>
+            <p className="typewriter-text">{f.thanks_text}</p>
+          </div>
+        ) : (
+          <form onSubmit={handleSubmit} className="wedding-form">
+            <div className="form-group">
+              <label>{f.attendance_label}</label>
+              <div className="radio-group">
+                <label><input type="radio" name="attendance" value={f.yes} required /> {f.yes}</label>
+                <label><input type="radio" name="attendance" value={f.no} /> {f.no}</label>
+              </div>
             </div>
-          </div>
 
-          <div className="form-group">
-            <label htmlFor="allergies">Allergier eller specialkost</label>
-            <textarea id="allergies" name="allergies" rows="3" placeholder="T.ex. Veganskt, Nötallergi..."></textarea>
-          </div>
+            {guests.map((guest, index) => (
+              <div className="guest-block" key={index}>
+                <div className="guest-header">
+                  <span className="guest-number">{f.guest} {index + 1}</span>
+                  {guests.length > 1 && (
+                    <button
+                      type="button"
+                      onClick={() => removeGuest(index)}
+                      className="remove-guest-btn"
+                    >
+                      {f.remove_guest}
+                    </button>
+                  )}
+                </div>
 
-          <div className="form-group">
-            <label htmlFor="message">Hälsning till brudparet</label>
-            <textarea id="message" name="message" rows="3"></textarea>
-          </div>
+                <div className="form-group">
+                  <label htmlFor={`name-${index}`}>{f.name_label}</label>
+                  <input
+                    type="text"
+                    id={`name-${index}`}
+                    value={guest.name}
+                    onChange={(e) => updateGuest(index, 'name', e.target.value)}
+                    required
+                    placeholder={f.name_placeholder}
+                  />
+                </div>
 
-          <button type="submit" className="submit-btn">Skicka svar</button>
-        </form>
+                <div className="form-group">
+                  <label htmlFor={`allergies-${index}`}>{f.allergies_label}</label>
+                  <input
+                    type="text"
+                    id={`allergies-${index}`}
+                    value={guest.allergies}
+                    onChange={(e) => updateGuest(index, 'allergies', e.target.value)}
+                    placeholder={f.allergies_placeholder}
+                  />
+                </div>
+              </div>
+            ))}
+
+            <button type="button" onClick={addGuest} className="add-guest-btn">
+              + {f.add_guest}
+            </button>
+
+            <div className="form-group">
+              <label htmlFor="message">{f.message_label}</label>
+              <input type="text" id="message" name="message" placeholder={f.message_placeholder} />
+            </div>
+
+            <button
+              type="submit"
+              className={`submit-btn ${isLoading ? 'is-loading' : ''}`}
+              disabled={isLoading}
+            >
+              {isLoading ? (
+                <>
+                  {f.sending}
+                  <span className="loading-dots"><span>.</span><span>.</span><span>.</span></span>
+                </>
+              ) : (
+                f.submit
+              )}
+            </button>
+          </form>
+        )}
       </section>
     </div>
   );

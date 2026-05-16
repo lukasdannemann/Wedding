@@ -1,24 +1,64 @@
 .hero-section {
-    /* padding: 60px 20px; */
-    padding-top: 2rem;
     text-align: center;
-}
-
-.castle-img {
-    max-width: 300px; /* Justera efter smak */
-    width: 100%;
-    height: auto;
-}
-
-.hero-intro .typewriter {
-    font-family: var(--font-text);
-    font-size: 1.2rem;
-    color: var(--color-text);
-    margin-bottom: 10px;
+    margin: 0;
+    padding: 1.5rem 0 0;
 }
 
 .hero-intro {
     font-size: 1rem;
-    color: #5D1212;
-    opacity: 0.8;
+    color: var(--color-text);
+    padding: 0 2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.hero-intro .fine-print {
+    font-size: 1.2rem;
+    margin-top: -0.5rem;
+}
+
+.hero-intro .typewriter {
+    font-family: var(--font-main);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--color-text);
+    margin-top: 4rem;
+}
+
+.hero-intro .typewriter + .typewriter {
+    margin-top: 1rem;
+}
+
+.castle-container {
+    margin-top: 1rem;
+}
+
+.castle-img {
+    max-width: 350px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+    .hero-section {
+        padding-top: 1rem;
+    }
+
+    .hero-intro {
+        padding: 0 1.25rem;
+    }
+
+    .hero-intro .typewriter {
+        font-size: 0.95rem;
+    }
+
+    .castle-img {
+        max-width: 280px;
+    }
+
+    .castle-container {
+        margin-top: 0.75rem;
+    }
 }

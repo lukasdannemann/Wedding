@@ -1,43 +1,29 @@
-// src/components/Navigation/Navigation.jsx
 import './Navigation.css'
-import { HashLink } from 'react-router-hash-link'
-import { NavLink, useLocation } from 'react-router-dom' // Importera useLocation
-import { useScrollSpy } from '../../hooks/useScrollSpy'
+import { NavLink } from 'react-router-dom'
+import { useLang } from '../../context/LanguageContext'
 
 export default function Navigation() {
-    const location = useLocation(); // Håll koll på nuvarande URL
-    const activeSection = useScrollSpy(['hem', 'vigsel', 'hitta-hit', 'schema']);
-
-    // Kontrollera om vi är på startsidan
-    const isHomePage = location.pathname === '/';
+    const { lang, t, toggleLang } = useLang();
 
     return (
         <nav className='navbar'>
             <ul>
-                <li>
-                    <HashLink 
-                        to='/#vigsel' 
-                        /* Lägg bara till 'active' om vi är på startsidan OCH sektionen är aktiv */
-                        className={isHomePage && activeSection === 'vigsel' ? 'active' : ''}
-                    >Vigsel</HashLink>
-                </li>
-                <li>
-                    <HashLink 
-                        to='/#hitta-hit'
-                        className={isHomePage && activeSection === 'hitta-hit' ? 'active' : ''}
-                    >Hitta hit</HashLink>
-                </li>
-                <li>
-                    <HashLink 
-                        to='/#schema' 
-                        className={isHomePage && activeSection === 'schema' ? 'active' : ''}
-                    >Schema</HashLink>
-                </li>
-                
-                {/* NavLink sköter sin egen 'active'-klass automatiskt */}
-                <li><NavLink to='/osa'>OSA</NavLink></li>
-                <li><NavLink to='/tal'>Tal</NavLink></li>
+                <li><NavLink to='/' end>{t.nav.hem}</NavLink></li>
+                <li><NavLink to='/osa'>{t.nav.osa}</NavLink></li>
+                <li><NavLink to='/tal'>{t.nav.tal}</NavLink></li>
             </ul>
+
+            <div className="lang-toggle">
+                <button
+                    onClick={() => toggleLang('sv')}
+                    className={lang === 'sv' ? 'active' : ''}
+                >SV</button>
+                <span>|</span>
+                <button
+                    onClick={() => toggleLang('en')}
+                    className={lang === 'en' ? 'active' : ''}
+                >EN</button>
+            </div>
         </nav>
     )
 }
