@@ -1,6 +1,7 @@
 import './Footer.css';
 import castleimg from '../../assets/riks-arkivet-transparent.png';
 import { useLang } from '../../context/LanguageContext';
+import { config } from '../../config';
 
 export default function Footer() {
     const { t } = useLang();
@@ -10,7 +11,7 @@ export default function Footer() {
             <div className="footer-inner">
 
                 <div className="footer-text-left">
-                    <p className="footer-names">Calle & Siobhán</p>
+                    <p className="footer-names">{config.coupleNames}</p>
                     <p className="footer-venue">{t.footer.venue}</p>
                 </div>
 
@@ -18,7 +19,7 @@ export default function Footer() {
 
                 <p className="footer-contact">
                     {t.footer.contact}{' '}
-                    <a href="mailto:siobhan.jansson@gmail.com">siobhan.jansson@gmail.com</a>
+                    <a href={`mailto:${config.contactEmail}`}>{config.contactEmail}</a>
                 </p>
 
             </div>

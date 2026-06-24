@@ -1,8 +1,7 @@
 import { useState } from 'react';
 import './forms.css';
 import { useLang } from '../context/LanguageContext';
-
-const OSA_ENDPOINT = "https://script.google.com/macros/s/AKfycbxvzEnaWFFOK18SqS65JtlHmaYqUY6W0NN1-b1xv_kpB_u2th022x897qAriqITZYzo/exec";
+import { config } from '../config';
 
 export default function Osa() {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -28,6 +27,12 @@ export default function Osa() {
     if (isLoading) return;
     setIsLoading(true);
 
+    // Demoläge: skicka inget på riktigt, visa bara tack-meddelandet.
+    if (config.demo || !config.osaEndpoint) {
+      setTimeout(() => setIsSubmitted(true), 600);
+      return;
+    }
+
     const formData = new FormData(e.target);
 
     // Lägg på gäst-fälten manuellt eftersom de är controlled och saknar name-attribut
@@ -37,7 +42,7 @@ export default function Osa() {
       formData.append(`allergies${i + 1}`, g.allergies);
     });
 
-    fetch(OSA_ENDPOINT, {
+    fetch(config.osaEndpoint, {
       method: "POST",
       mode: "no-cors",
       body: formData,

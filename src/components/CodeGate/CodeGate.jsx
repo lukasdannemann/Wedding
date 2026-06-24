@@ -3,6 +3,7 @@ import './CodeGate.css';
 import castleimg from '../../assets/riks-arkivet-transparent.png';
 import { useAuth } from '../../context/AuthContext';
 import { useLang } from '../../context/LanguageContext';
+import { config } from '../../config';
 
 export default function CodeGate() {
     const [code, setCode] = useState('');
@@ -40,7 +41,7 @@ export default function CodeGate() {
 
             <div className="code-gate-card">
                 <img src={castleimg} alt="Gamla Riksarkivet" className="code-gate-castle" />
-                <h1 className="code-gate-title">Calle &amp; Siobhán</h1>
+                <h1 className="code-gate-title">{config.coupleNames}</h1>
                 {/* <p className="fine-print code-gate-date">{t.hero.date}</p> */}
 
                 {/* <div className="thin-line"></div> */}
@@ -64,6 +65,11 @@ export default function CodeGate() {
                     <p className={`code-gate-error ${error ? 'visible' : ''}`}>
                         {t.gate.error}
                     </p>
+                    {config.demo && (
+                        <p className="fine-print" style={{ marginTop: '-0.5rem' }}>
+                            Demo – kod: {config.accessCode}
+                        </p>
+                    )}
                     <button
                         type="submit"
                         className="submit-btn"

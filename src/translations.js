@@ -1,3 +1,7 @@
+import { config } from './config';
+
+const D = config.demo;
+
 export const translations = {
   sv: {
     nav: {
@@ -19,11 +23,11 @@ export const translations = {
       intro: ["Välkommen till vårt bröllop på Gamla Riksarkivet! Vigsel äger rum på plats klockan 15:00, därefter blir det mingel följt av middag och fest.",
         "Mer detaljerad info kommer närmare inpå bröllopsdagen."
       ],
-      date: 'Lördagen den 19 september 2026',
+      date: D ? 'Lördagen den 12 juni 2027' : 'Lördagen den 19 september 2026',
     },
     info: {
       datetime_label: 'DATUM & TID',
-      datetime: '19 september 2026 · 15:00',
+      datetime: D ? '12 juni 2027 · 15:00' : '19 september 2026 · 15:00',
       location_label: 'PLATS',
       location: 'Gamla Riksarkivet, Riddarholmen, Stockholm',
       dresscode_label: 'KLÄDKOD',
@@ -46,7 +50,7 @@ export const translations = {
     },
     osa: {
       header: 'O.S.A.',
-      deadline: 'Här kan du meddela din närvaro! Vänligen OSA senast den 19:e augusti. Fyll i uppgifter för alla i ditt sällskap.',
+      deadline: `Här kan du meddela din närvaro! Vänligen OSA senast den ${D ? '12:e maj' : '19:e augusti'}. Fyll i uppgifter för alla i ditt sällskap.`,
       name_label: 'Namn',
       name_placeholder: 'Förnamn Efternamn',
       attendance_label: 'Kommer ni?',
@@ -104,11 +108,11 @@ export const translations = {
         "Welcome to our wedding at Gamla Riksarkivet! The ceremony will take place on-site at 3:00 PM, followed by a reception, dinner, and party.",
         "More detailed info will be available closer to the wedding day."
       ],
-      date: 'Saturday 19 September 2026',
+      date: D ? 'Saturday 12 June 2027' : 'Saturday 19 September 2026',
     },
     info: {
       datetime_label: 'DATE & TIME',
-      datetime: '19 September 2026 · 3:00 PM',
+      datetime: D ? '12 June 2027 · 3:00 PM' : '19 September 2026 · 3:00 PM',
       location_label: 'LOCATION',
       location: 'Gamla Riksarkivet, Riddarholmen, Stockholm',
       dresscode_label: 'DRESS CODE',
@@ -131,7 +135,7 @@ export const translations = {
     },
     osa: {
       header: 'R.S.V.P.',
-      deadline: 'Let us know if you will attend! Please reply by the 19th of August. Fill in details for everyone in your party.',
+      deadline: `Let us know if you will attend! Please reply by the ${D ? '12th of May' : '19th of August'}. Fill in details for everyone in your party.`,
       name_label: 'Name',
       name_placeholder: 'First name Last name',
       attendance_label: 'Will you attend?',

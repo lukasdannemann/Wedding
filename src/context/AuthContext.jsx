@@ -1,8 +1,9 @@
 import { createContext, useContext, useState } from 'react';
+import { config } from '../config';
 
-// Ändra koden här när du vill byta. Det är klientsida — alltså ingen
-// riktig säkerhet, bara en mjuk grind så obehöriga inte snubblar in.
-const ACCESS_CODE = '1910';
+// Det är klientsida — alltså ingen riktig säkerhet, bara en mjuk grind så
+// obehöriga inte snubblar in. Koden styrs från config.js (demo vs skarp).
+const ACCESS_CODE = config.accessCode;
 const STORAGE_KEY = 'wedding-access';
 
 const AuthContext = createContext(null);

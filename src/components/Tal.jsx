@@ -1,10 +1,7 @@
 import { useState } from 'react';
 import './forms.css';
 import { useLang } from '../context/LanguageContext';
-
-// Samma Apps Script-endpoint som Osa — `Kategori`-fältet nedan styr
-// vilket ark/flik svaren hamnar i. Byt URL här om du vill ha ett separat ark.
-const TAL_ENDPOINT = "https://script.google.com/macros/s/AKfycbxNwT66Uq1c5hyRVPCPSqLx2_eyUTLZLENPW9_m3t9DDm0FzCBns2dRNKex0qHM3ZIuOA/exec";
+import { config } from '../config';
 
 export default function Tal() {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -17,10 +14,16 @@ export default function Tal() {
     if (isLoading) return;
     setIsLoading(true);
 
+    // Demoläge: skicka inget på riktigt, visa bara tack-meddelandet.
+    if (config.demo || !config.talEndpoint) {
+      setTimeout(() => setIsSubmitted(true), 600);
+      return;
+    }
+
     const form = e.target;
     const formData = new FormData(form);
 
-    fetch(TAL_ENDPOINT, {
+    fetch(config.talEndpoint, {
       method: "POST",
       mode: "no-cors",
       body: formData
