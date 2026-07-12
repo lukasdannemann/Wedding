@@ -31,7 +31,7 @@ export const translations = {
       location_label: 'PLATS',
       location: 'Gamla Riksarkivet, Riddarholmen, Stockholm',
       dresscode_label: 'KLÄDKOD',
-      dresscode: 'Mörk kavaj',
+      dresscode: 'Mörk kostym',
       // additionalInfo_label: 'BRA ATT VETA',
       // additionalInfo: [
       //   {
