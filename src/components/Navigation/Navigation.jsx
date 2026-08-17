@@ -11,6 +11,7 @@ export default function Navigation() {
                 <li><NavLink to='/' end>{t.nav.hem}</NavLink></li>
                 <li><NavLink to='/osa'>{t.nav.osa}</NavLink></li>
                 <li><NavLink to='/tal'>{t.nav.tal}</NavLink></li>
+                <li><NavLink to='/gavor'>{t.nav.gavor}</NavLink></li>
             </ul>
 
             <div className="lang-toggle">

@@ -219,6 +219,15 @@
   background-color: transparent;
 }
 
+.add-guest-btn.is-loading,
+.add-guest-btn:disabled,
+.remove-guest-btn.is-loading,
+.remove-guest-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
 @media (max-width: 600px) {
     .form-page {
         padding-top: 1rem;

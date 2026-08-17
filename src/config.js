@@ -14,4 +14,8 @@ export const config = {
   talEndpoint: DEMO
     ? ''
     : 'https://script.google.com/macros/s/AKfycbxNwT66Uq1c5hyRVPCPSqLx2_eyUTLZLENPW9_m3t9DDm0FzCBns2dRNKex0qHM3ZIuOA/exec',
+  // Fyll i /exec-URL:en efter att Gåvor-scriptet är distribuerat.
+  gavaEndpoint: DEMO
+    ? ''
+    : 'https://script.google.com/macros/s/AKfycbzRsWPVMBxEjIX8N451UwcG4ugO2lEgDePXitSrdBQkz9lp1GsXEt0nvMg1sBUu2diUng/exec',
 };

@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Outlet } from 'react-router-dom
 import Home from './pages/Home/Home'
 import Tal from './components/Tal'
 import Osa from './components/Osa'
+import Gavor from './components/Gavor/Gavor'
 import Header from './components/Header/Header'
 import Navigation from './components/Navigation/Navigation'
 import ScrollToTop from './components/ScrollToTop/ScrollToTop'
@@ -45,6 +46,7 @@ function AppContent() {
           <Route path="/" element={<Home />} />
           <Route path="/osa" element={<Osa />} />
           <Route path="/tal" element={<Tal />} />
+          <Route path="/gavor" element={<Gavor />} />
         </Route>
         <Route path="*" element={<ErrorPage />} />
       </Routes>

@@ -1,0 +1,198 @@
+.gavor-page {
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.gavor-page .section-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.gavor-intro {
+    max-width: 480px;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.gavor-conflict {
+    color: var(--color-burgundy);
+    font-style: italic;
+    text-align: center;
+    max-width: 420px;
+    margin: 1.5rem 0 0;
+}
+
+.gift-table {
+    width: 100%;
+    max-width: 560px;
+    margin-top: 40px;
+    border-collapse: collapse;
+}
+
+.gift-table thead th {
+    font-family: var(--font-main);
+    color: var(--color-burgundy);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    text-align: left;
+    padding: 0 0 12px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.gift-row td {
+    padding: 18px 0;
+    border-bottom: 1px solid var(--color-border);
+    vertical-align: middle;
+    text-align: left;
+}
+
+.gift-row td:last-child {
+    text-align: right;
+    white-space: nowrap;
+}
+
+.gift-name {
+    display: block;
+    font-family: var(--font-main);
+    color: var(--color-text);
+    font-size: 1rem;
+    letter-spacing: 0.02em;
+}
+
+.gift-description {
+    display: block;
+    font-family: var(--font-text);
+    font-size: 0.85rem;
+    color: var(--color-text);
+    opacity: 0.75;
+    margin-top: 2px;
+}
+
+.gift-price {
+    display: block;
+    font-family: var(--font-main);
+    font-size: 0.8rem;
+    letter-spacing: 0.04em;
+    color: var(--color-burgundy);
+    opacity: 0.85;
+    margin-top: 4px;
+}
+
+.gift-link {
+    display: inline-block;
+    margin-top: 4px;
+    font-family: var(--font-text);
+    font-style: italic;
+    font-size: 0.8rem;
+    color: var(--color-burgundy);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: opacity 0.2s ease;
+}
+
+.gift-link:hover {
+    opacity: 0.75;
+}
+
+.gift-taken-label {
+    font-family: var(--font-main);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-text);
+    opacity: 0.5;
+}
+
+.gift-mine {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+}
+
+.gift-mine-label {
+    font-family: var(--font-main);
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    color: var(--color-burgundy);
+    font-weight: bold;
+}
+
+/* Rad-tillstånd */
+.gift-row--available td {
+    transition: background-color 0.2s ease;
+}
+
+.gift-row--mine {
+    background-color: rgba(122, 0, 0, 0.05);
+    border-left: 3px solid var(--color-burgundy);
+}
+
+.gift-row--mine td:first-child {
+    padding-left: 12px;
+}
+
+.gift-row--taken {
+    opacity: 0.5;
+}
+
+.gift-row--taken .gift-name,
+.gift-row--taken .gift-description {
+    color: var(--color-text);
+}
+
+@media (max-width: 600px) {
+    .gavor-page {
+        padding-top: 1rem;
+        min-height: auto;
+    }
+
+    .gift-table {
+        margin-top: 25px;
+    }
+
+    .gift-table thead {
+        display: none;
+    }
+
+    .gift-row {
+        display: block;
+        padding: 16px 0;
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    .gift-row--mine {
+        padding-left: 10px;
+    }
+
+    .gift-row td {
+        display: block;
+        border-bottom: none;
+        padding: 0;
+        text-align: left !important;
+        white-space: normal;
+    }
+
+    .gift-row td:first-child {
+        margin-bottom: 10px;
+    }
+
+    .gift-row--mine td:first-child {
+        padding-left: 0;
+    }
+
+    .gift-mine {
+        align-items: flex-start;
+    }
+
+    .add-guest-btn {
+        width: 100%;
+    }
+}
