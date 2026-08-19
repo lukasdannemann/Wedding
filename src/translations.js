@@ -34,16 +34,16 @@ export const translations = {
       dresscode_label: 'KLÄDKOD',
       dresscode: 'Mörk kostym',
       // additionalInfo_label: 'BRA ATT VETA',
-      // additionalInfo: [
-      //   {
-      //     gifts_label: 'Gåvor',
-      //     gifts: 'Vi tar gärna emot gåvor'
-      //   },
-      //     {
-      //       holdingTimes_label: 'Hålltider',
-      //       holdingTimes: ['Vigsel: 15:00', 'Middag: 17:00', 'Lokal stänger: 02:00']
-      //     }
-      // ]
+      additionalInfo: [
+        {
+          gifts_label: 'Gåvor',
+          gifts: 'Vi tar gärna emot gåvor'
+        },
+          {
+            holdingTimes_label: 'Hålltider',
+            holdingTimes: ['Vigsel: 15:00', 'Middag: 17:00', 'Lokal stänger: 02:00']
+          }
+      ]
     },
     footer: {
       contact: 'Frågor? Kontakta oss på',

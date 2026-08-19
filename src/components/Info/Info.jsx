@@ -46,12 +46,16 @@ export default function Info() {
                 <p className="typewriter-text">{t.info.dresscode}</p>
             </div>
 
-            {/* <div className="info-block">
-                <p className="typewriter-label">{t.info.additionalInfo_label}</p>
+            <div className="thin-line"></div> 
+
+            <div className="info-block">
+                {t.info.additionalInfo_label && (
+                    <p className="typewriter-label">{t.info.additionalInfo_label}</p>
+                )}
                 <div className="info-sub-list">
                     {renderSubBlocks()}
                 </div>
-            </div> */} {/* Avkommentera när underrubriker finns */}
+            </div>
         </section>
     );
 }

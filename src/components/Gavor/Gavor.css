@@ -125,6 +125,18 @@
     font-weight: bold;
 }
 
+/* Samma hover-animation som submit-btn i OSA-formuläret */
+.gift-row .add-guest-btn {
+    transition: background-color 0.25s ease, color 0.25s ease, transform 0.2s ease;
+}
+
+.gift-row .add-guest-btn:hover {
+    background-color: var(--color-burgundy);
+    color: white;
+    border-color: var(--color-burgundy);
+    transform: translateY(-2px);
+}
+
 /* Rad-tillstånd */
 .gift-row--available td {
     transition: background-color 0.2s ease;

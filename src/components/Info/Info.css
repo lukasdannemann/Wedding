@@ -1,11 +1,11 @@
 .info-section {
     text-align: center;
-    gap: 1.5rem;
+    gap: 2.5rem;
     padding-top: 30px;
 }
 
 .info-section .thin-line {
-    margin: 0 auto 1rem;
+    margin: 0 auto;
 }
 
 .info-block {
@@ -13,11 +13,13 @@
 }
 
 .info-block .typewriter-label {
+    margin-top: 0;
     margin-bottom: 0.4rem;
 }
 
 .info-block .typewriter-text {
-    margin-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
     font-size: 1rem;
     line-height: 1.5;
 }
@@ -28,6 +30,10 @@
     flex-direction: column;
     align-items: center;
     gap: 1.1rem;
+    margin-top: 0;
+}
+
+.info-block .typewriter-label + .info-sub-list {
     margin-top: 1.5rem;
 }
 
@@ -59,7 +65,7 @@
 
 @media (max-width: 600px) {
     .info-section {
-        gap: 1.25rem;
+        gap: 2rem;
     }
 
     .info-block .typewriter-text {
