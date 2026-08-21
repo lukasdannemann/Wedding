@@ -22,7 +22,6 @@ export const translations = {
     },
     hero: {
       intro: ["Välkommen till vårt bröllop på Gamla Riksarkivet! Vigsel äger rum på plats klockan 15:00, därefter blir det mingel följt av middag och fest.",
-        "Mer detaljerad info kommer närmare inpå bröllopsdagen."
       ],
       date: D ? 'Lördagen den 12 juni 2027' : 'Lördagen den 19 september 2026',
     },
@@ -33,17 +32,25 @@ export const translations = {
       location: 'Gamla Riksarkivet, Riddarholmen, Stockholm',
       dresscode_label: 'KLÄDKOD',
       dresscode: 'Mörk kostym',
-      // additionalInfo_label: 'BRA ATT VETA',
-      additionalInfo: [
+      gifts_label: 'BRÖLLOPSPRESENTER',
+      gifts_text: 'Om ni vill köpa en bröllopspresent till oss finns lite förslag på vad vi önskar oss, men det viktigaste för oss är att ni är med och firar vår dag med oss. Om det är så att ni vill köpa något kan ni reservera här på hemsidan, för att undvika dubbletter.',
+      gifts_link: 'Till önskelistan',
+      schedule_label: 'HÅLLTIDER',
+      schedule: [
         {
-          gifts_label: 'Gåvor',
-          gifts: 'Vi tar gärna emot gåvor'
+          time: '14:30',
+          text: 'Varmt välkomna till Gamla Riksarkivet på Riddarholmen. Kom dit i god tid för att lugnt hinna ta plats inför vigseln.',
         },
-          {
-            holdingTimes_label: 'Hålltider',
-            holdingTimes: ['Vigsel: 15:00', 'Middag: 17:00', 'Lokal stänger: 02:00']
-          }
-      ]
+        {
+          time: '15:00',
+          text: 'Vigsel börjar. Det är en borgerlig vigsel som äger rum inne i en av salarna på Gamla Riksarkivet.',
+        },
+        {
+          time: '',
+          text: 'Efter vigseln blir det mingel och brudskål följt av middag och fest!',
+        },
+      ],
+      schedule_outro: 'Vi ser fram emot att fira denna dag med er ♥',
     },
     footer: {
       contact: 'Frågor? Kontakta oss på',
@@ -89,7 +96,7 @@ export const translations = {
     },
     gavor: {
       header: 'Gåvor',
-      intro: 'För de som vill bidra med gåvor har vi här nedan samlat förslag på saker vi uppskattar! Här kan du reservera en gåva du vill ge för att undvika dubbletter.',
+      intro: 'Om ni vill köpa en bröllopspresent till oss finns lite förslag nedan på vad vi önskar oss, men det viktigaste för oss är att ni är med och firar vår dag med oss. Om det är så att ni vill köpa något från önskelistan kan ni reservera det här nedan.',
       name_col: 'Gåva',
       status_col: '',
       reserve: 'Reservera',
@@ -125,7 +132,6 @@ export const translations = {
     hero: {
       intro: [
         "Welcome to our wedding at Gamla Riksarkivet! The ceremony will take place on-site at 3:00 PM, followed by a reception, dinner, and party.",
-        "More detailed info will be available closer to the wedding day."
       ],
       date: D ? 'Saturday 12 June 2027' : 'Saturday 19 September 2026',
     },
@@ -136,17 +142,25 @@ export const translations = {
       location: 'Gamla Riksarkivet, Riddarholmen, Stockholm',
       dresscode_label: 'DRESS CODE',
       dresscode: 'Dark suit',
-      // additionalInfo_label: 'GOOD TO KNOW',
-      // additionalInfo: [
-      //   {
-      //     gifts_label: 'Gifts',
-      //     gifts: 'We would like to receive gifts'
-      //   },
-      //   {
-      //     holdingTimes_label: 'Schedule',
-      //     holdingTimes: ['Ceremony - 3:00 PM', 'Dinner - 5:00 PM', 'Building closes - 02:00 AM']
-      //   }
-      // ]
+      gifts_label: 'WEDDING GIFTS',
+      gifts_text: 'If you would like to give a wedding gift, we have put together a few suggestions of things we would appreciate — however, the most important thing for us is that you are there to celebrate the day with us. If you do want to give something from the wishlist, you can reserve it here on the website.',
+      gifts_link: 'To the wishlist',
+      schedule_label: 'SCHEDULE',
+      schedule: [
+        {
+          time: '2:30 PM',
+          text: 'A warm welcome to Gamla Riksarkivet on Riddarholmen. Please arrive on time so that everyone can be seated in time for the ceremony.',
+        },
+        {
+          time: '3:00 PM',
+          text: 'The ceremony begins. It is a civil ceremony held in one of the halls at Gamla Riksarkivet.',
+        },
+        {
+          time: '',
+          text: 'After the ceremony there will be a reception and a toast to the couple, followed by dinner and a party!',
+        },
+      ],
+      schedule_outro: 'We look forward to celebrate this day with you ♥',
     },
     footer: {
       contact: 'Questions? Contact us at',
@@ -192,7 +206,7 @@ export const translations = {
     },
     gavor: {
       header: 'Gifts',
-      intro: 'We would appreciate it if you chose something from the list below. Reservations are anonymous, but your own reservation is always clearly marked here on the page.',
+      intro: 'If you would like to give us a wedding gift, you will find a few suggestions below of things we would appreciate — but the most important thing for us is that you are there to celebrate the day with us. If you do want to give something from the wishlist, you can reserve it down below.',
       name_col: 'Gift',
       status_col: '',
       reserve: 'Reserve',

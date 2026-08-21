@@ -1,31 +1,9 @@
 import './Info.css';
+import { Link } from 'react-router-dom';
 import { useLang } from '../../context/LanguageContext';
 
 export default function Info() {
     const { t } = useLang();
-
-    // Plockar ut label + värde dynamiskt ur varje objekt i additionalInfo
-    // så att du kan lägga till/byta poster i translations utan att röra JSX
-    const renderSubBlocks = () =>
-        t.info.additionalInfo.map((item, idx) => {
-            const labelKey = Object.keys(item).find((k) => k.endsWith('_label'));
-            const valueKey = Object.keys(item).find((k) => !k.endsWith('_label'));
-            const label = item[labelKey];
-            const value = item[valueKey];
-
-            return (
-                <div className="info-sub-block" key={idx}>
-                    <p className="info-sub-label">{label}</p>
-                    {Array.isArray(value) ? (
-                        value.map((line, i) => (
-                            <p className="typewriter-text info-sub-text" key={i}>{line}</p>
-                        ))
-                    ) : (
-                        <p className="typewriter-text info-sub-text">{value}</p>
-                    )}
-                </div>
-            );
-        });
 
     return (
         <section className="section-container info-section">
@@ -46,15 +24,29 @@ export default function Info() {
                 <p className="typewriter-text">{t.info.dresscode}</p>
             </div>
 
-            <div className="thin-line"></div> 
+            <div className="thin-line"></div>
 
             <div className="info-block">
-                {t.info.additionalInfo_label && (
-                    <p className="typewriter-label">{t.info.additionalInfo_label}</p>
-                )}
-                <div className="info-sub-list">
-                    {renderSubBlocks()}
+                <p className="typewriter-label">{t.info.gifts_label}</p>
+                <p className="typewriter-text info-body-text">{t.info.gifts_text}</p>
+                <Link to="/gavor" className="info-link">{t.info.gifts_link}</Link>
+            </div>
+
+            <div className="thin-line"></div>
+
+            <div className="info-block">
+                <p className="typewriter-label">{t.info.schedule_label}</p>
+
+                <div className="schedule-list">
+                    {t.info.schedule.map((item, i) => (
+                        <div className="schedule-item" key={i}>
+                            {item.time && <span className="schedule-time">{item.time}</span>}
+                            <p className="schedule-text">{item.text}</p>
+                        </div>
+                    ))}
                 </div>
+
+                <p className="schedule-outro">{t.info.schedule_outro}</p>
             </div>
         </section>
     );
