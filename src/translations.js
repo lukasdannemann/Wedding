@@ -21,13 +21,13 @@ export const translations = {
       button: 'Till startsidan',
     },
     hero: {
-      intro: ["Välkommen till vårt bröllop på Gamla Riksarkivet! Vigsel äger rum på plats klockan 15:00, därefter blir det mingel följt av middag och fest.",
+      intro: ["Välkommen till vårt bröllop på Gamla Riksarkivet! Vigsel äger rum på plats, därefter blir det mingel följt av middag och fest.",
       ],
       date: D ? 'Lördagen den 12 juni 2027' : 'Lördagen den 19 september 2026',
     },
     info: {
       datetime_label: 'DATUM & TID',
-      datetime: D ? '12 juni 2027 · 15:00' : '19 september 2026 · 15:00',
+      datetime: D ? '12 juni 2027 · 15:00' : '19 september 2026 · 14:30',
       location_label: 'PLATS',
       location: 'Gamla Riksarkivet, Riddarholmen, Stockholm',
       dresscode_label: 'KLÄDKOD',
@@ -131,13 +131,13 @@ export const translations = {
     },
     hero: {
       intro: [
-        "Welcome to our wedding at Gamla Riksarkivet! The ceremony will take place on-site at 3:00 PM, followed by a reception, dinner, and party.",
+        "Welcome to our wedding at Gamla Riksarkivet! The ceremony will take place on-site, followed by a reception, dinner, and party.",
       ],
       date: D ? 'Saturday 12 June 2027' : 'Saturday 19 September 2026',
     },
     info: {
       datetime_label: 'DATE & TIME',
-      datetime: D ? '12 June 2027 · 3:00 PM' : '19 September 2026 · 3:00 PM',
+      datetime: D ? '12 June 2027 · 3:00 PM' : '19 September 2026 · 2:30 PM',
       location_label: 'LOCATION',
       location: 'Gamla Riksarkivet, Riddarholmen, Stockholm',
       dresscode_label: 'DRESS CODE',
